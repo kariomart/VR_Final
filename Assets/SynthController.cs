@@ -7,7 +7,8 @@ public class SynthController : MonoBehaviour
 {
     // Start is called before the first frame update
     public HelmController synth;
-    public Transform hand1;
+    public Transform hand;
+    public Vector2 defaultPos;
     public int[] scale = {0, 2, 4, 5, 7, 9, 11 };
     public int octaveSize = 12;
 
@@ -16,19 +17,25 @@ public class SynthController : MonoBehaviour
     public float rangeOfMovementX;
     public float rangeOfMovementY;
 
+    public int noteMin;
+    public int noteMax;
+
     GroundKey[] keys;
     int currentNote;
 
     void Start()
     {
-    
+        defaultPos = hand.position;
+
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        int tempNote = Mathf.RoundToInt(hand1.transform.position.y*3);
+        float diff = hand.position.y - defaultPos.y;
+        diff = Remap(diff, -rangeOfMovementY, rangeOfMovementY, -10, 10);
+        int tempNote = Mathf.RoundToInt(noteMin + diff);
         if (tempNote != currentNote) {
             currentNote = tempNote;
             NoteOn(currentNote);
@@ -55,7 +62,7 @@ public class SynthController : MonoBehaviour
 
     public void SetFilter()
     {
-        float val = hand1.transform.position.x;
+        float val = hand.transform.position.x;
         val = Remap(val, -10f, 10f, 0, 1);  
         val = Mathf.Clamp(val, 0, 1);
         synth.SetParameterAtIndex(0, val);
