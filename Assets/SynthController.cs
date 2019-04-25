@@ -25,8 +25,7 @@ public class SynthController : MonoBehaviour
 
     void Start()
     {
-        defaultPos = hand.position;
-
+        defaultPos = hand.position; 
 
     }
 
@@ -39,6 +38,7 @@ public class SynthController : MonoBehaviour
         if (tempNote != currentNote) {
             currentNote = tempNote;
             NoteOn(currentNote);
+            Debug.Log(diff + " " + currentNote);
         }
 
         SetFilter();
