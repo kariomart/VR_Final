@@ -20,6 +20,6 @@ public class BPMController : MonoBehaviour
     void FixedUpdate()
     {
         float dif = transform.position.y - defaultPos.y;
-        clock.bpm = 120 + dif;
+        clock.bpm = 120 + dif*10;
     }
 }
