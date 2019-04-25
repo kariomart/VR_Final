@@ -63,9 +63,9 @@ public class SynthController : MonoBehaviour
     public void SetFilter()
     {
         float val = hand.transform.position.x;
-        val = Remap(val, -10f, 10f, 0, 1);  
+        val = Remap(val, -10f, 10f, 0, rangeOfMovementX);  
         val = Mathf.Clamp(val, 0, 1);
-        synth.SetParameterAtIndex(0, val);
+        synth.SetParameterAtIndex(0, .5f+val);
         synth.SetParameterAtIndex(1, 1-val);
     }
 
