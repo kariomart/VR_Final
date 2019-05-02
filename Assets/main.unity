@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -76,10 +77,16 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 0
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 0
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -88,6 +95,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -112,62 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!83 &54739308
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 44100
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
---- !u!83 &127826913
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 44100
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!1 &193178189
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,8 +157,8 @@ MonoBehaviour:
   channel: 0
   synthParamValue0: 0
   synthParamValue1: 0.375
-  synthParamValue2: 1
-  synthParamValue3: 1
+  synthParamValue2: 0
+  synthParamValue3: 0
   synthParamValue4: 0
   synthParamValue5: 0
   synthParamValue6: 0
@@ -237,13 +189,13 @@ MonoBehaviour:
     parent: {fileID: 193178190}
     minimumRange: 0
     maximumRange: 1.4143
-    paramValue_: 1
+    paramValue_: 0
   - parameter_: 37
     scaleType: 1
     parent: {fileID: 193178190}
     minimumRange: 0
     maximumRange: 1
-    paramValue_: 1
+    paramValue_: 0
   - parameter_: 38
     scaleType: 1
     parent: {fileID: 193178190}
@@ -281,7 +233,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243620331226199118, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 54739308}
+  m_audioClip: {fileID: 1492654093}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -394,11 +346,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f011395508ee74f62a1e224168e16b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 1
+  left: 0
   vrEnabled: 0
   source: {fileID: 0}
-  synth: {fileID: 193178190}
-  hand: {fileID: 1186711766}
+  synth: {fileID: 0}
+  hand: {fileID: 696352634}
   defaultPos: {x: 0, y: 0}
   scale: 0000000002000000040000000500000007000000090000000b000000
   octaveSize: 12
@@ -406,9 +358,9 @@ MonoBehaviour:
   octaveSpan: 0
   numKeys: 60
   startingKey: 24
-  rangeOfMovementX: 1
-  rangeOfMovementY: 1
-  noteMin: 40
+  rangeOfMovementX: 0
+  rangeOfMovementY: 0
+  noteMin: 0
   noteMax: 0
 --- !u!114 &193178197
 MonoBehaviour:
@@ -423,14 +375,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   analyzer: {fileID: 0}
-  smoothing: 0.12
-  shaderTimeAmount: 0.05
-  shaderTimeLowBound: 50
-  shaderTimeHighBound: 300
-  shaderDisplaceAmount: 2.51
-  shaderColorAmount: 59
-  shaderColorLowBound: 7243
-  shaderColorHighBound: 16798
+  smoothing: 0.75
+  shaderTimeAmount: 0
+  shaderTimeLowBound: 0
+  shaderTimeHighBound: 0
+  shaderDisplaceAmount: 0
+  shaderColorAmount: 0
+  shaderColorLowBound: 0
+  shaderColorHighBound: 0
   reactiveGameObject: {fileID: 332505301}
   myMaterial: {fileID: 0}
 --- !u!114 &193178198
@@ -448,7 +400,7 @@ MonoBehaviour:
   spectrumData: []
   audioSource: {fileID: 0}
   bandBuffer: []
-  sampleRate: 4800
+  sampleRate: 0
 --- !u!1 &320130054
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +454,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320130054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -651,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a1340253f4b4663af0ab518cf0aee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clock: {fileID: 1492609788}
+  clock: {fileID: 0}
   defaultPos: {x: 0, y: 0}
 --- !u!135 &420666698
 SphereCollider:
@@ -1380,40 +1332,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6faed88bb01468fb8fd49178ba50fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &870915903 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1862540227445348, guid: efe266538a8dcda4dbd04fbff7997053,
+--- !u!4 &696352634 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4294807383680636, guid: efe266538a8dcda4dbd04fbff7997053,
     type: 3}
   m_PrefabInstance: {fileID: 1069487482}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &870915904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870915903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f011395508ee74f62a1e224168e16b1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  left: 0
-  vrEnabled: 0
-  source: {fileID: 0}
-  synth: {fileID: 0}
-  hand: {fileID: 0}
-  defaultPos: {x: 0, y: 0}
-  scale: 0000000002000000040000000500000007000000090000000b000000
-  octaveSize: 12
-  minNote: 0
-  octaveSpan: 0
-  numKeys: 60
-  startingKey: 24
-  rangeOfMovementX: 0
-  rangeOfMovementY: 0
-  noteMin: 0
-  noteMax: 0
 --- !u!1001 &1069487482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1423,7 +1347,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1862540227445348, guid: efe266538a8dcda4dbd04fbff7997053, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4660621310658468, guid: efe266538a8dcda4dbd04fbff7997053, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1431,11 +1355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4660621310658468, guid: efe266538a8dcda4dbd04fbff7997053, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 4660621310658468, guid: efe266538a8dcda4dbd04fbff7997053, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.75
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 4660621310658468, guid: efe266538a8dcda4dbd04fbff7997053, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1517,7 +1441,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186711765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1575,7 +1499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1345026948
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1612,9 +1536,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.21323532, g: 0.21323532, b: 0.21323532, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -1713,6 +1638,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!83 &1492654093
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
+--- !u!83 &1540656358
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &1691384918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,12 +1719,13 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691384918}
   m_Enabled: 1
-  serializedVersion: 8
+  serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -1753,6 +1735,24 @@ Light:
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -1760,12 +1760,15 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1691384920
@@ -1818,9 +1821,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   channel: 1
   synthParamValue0: 0
-  synthParamValue1: 0
-  synthParamValue2: 1
-  synthParamValue3: 1
+  synthParamValue1: 0.375
+  synthParamValue2: 0
+  synthParamValue3: 0
   synthParamValue4: 0
   synthParamValue5: 0
   synthParamValue6: 0
@@ -1834,30 +1837,42 @@ MonoBehaviour:
   synthParamValue14: 0
   synthParamValue15: 0
   synthParameters:
-  - parameter_: 14
-    scaleType: 1
-    parent: {fileID: 1948717423}
-    minimumRange: 28
-    maximumRange: 127
-    paramValue_: 0
-  - parameter_: 86
+  - parameter_: 87
     scaleType: 1
     parent: {fileID: 1948717423}
     minimumRange: 0
     maximumRange: 1
     paramValue_: 0
-  - parameter_: 89
+  - parameter_: 31
     scaleType: 1
     parent: {fileID: 1948717423}
-    minimumRange: 0
-    maximumRange: 1
-    paramValue_: 1
+    minimumRange: -12
+    maximumRange: 20
+    paramValue_: 0.375
   - parameter_: 142
     scaleType: 1
     parent: {fileID: 1948717423}
     minimumRange: 0
     maximumRange: 1.4143
-    paramValue_: 1
+    paramValue_: 0
+  - parameter_: 37
+    scaleType: 1
+    parent: {fileID: 1948717423}
+    minimumRange: 0
+    maximumRange: 1
+    paramValue_: 0
+  - parameter_: 38
+    scaleType: 1
+    parent: {fileID: 1948717423}
+    minimumRange: 0
+    maximumRange: 1
+    paramValue_: 0
+  - parameter_: 39
+    scaleType: 1
+    parent: {fileID: 1948717423}
+    minimumRange: 0
+    maximumRange: 1
+    paramValue_: 0
 --- !u!114 &1948717424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,7 +1898,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243472660568356628, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 127826913}
+  m_audioClip: {fileID: 1540656358}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1996,11 +2011,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f011395508ee74f62a1e224168e16b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 0
-  vrEnabled: 0
+  left: 1
+  vrEnabled: 1
   source: {fileID: 0}
-  synth: {fileID: 1948717423}
-  hand: {fileID: 320130055}
+  synth: {fileID: 0}
+  hand: {fileID: 1984159837}
   defaultPos: {x: 0, y: 0}
   scale: 0000000002000000040000000500000007000000090000000b000000
   octaveSize: 12
@@ -2008,9 +2023,9 @@ MonoBehaviour:
   octaveSpan: 0
   numKeys: 60
   startingKey: 24
-  rangeOfMovementX: 1
-  rangeOfMovementY: 1
-  noteMin: 20
+  rangeOfMovementX: 0
+  rangeOfMovementY: 0
+  noteMin: 0
   noteMax: 0
 --- !u!114 &1948717428
 MonoBehaviour:
@@ -2025,14 +2040,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   analyzer: {fileID: 0}
-  smoothing: 0.12
-  shaderTimeAmount: 0.05
-  shaderTimeLowBound: 50
-  shaderTimeHighBound: 300
-  shaderDisplaceAmount: 2.51
-  shaderColorAmount: 59
-  shaderColorLowBound: 7243
-  shaderColorHighBound: 16798
+  smoothing: 0.75
+  shaderTimeAmount: 0
+  shaderTimeLowBound: 0
+  shaderTimeHighBound: 0
+  shaderDisplaceAmount: 0
+  shaderColorAmount: 0
+  shaderColorLowBound: 0
+  shaderColorHighBound: 0
   reactiveGameObject: {fileID: 332505301}
   myMaterial: {fileID: 0}
 --- !u!114 &1948717429
@@ -2051,3 +2066,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   bandBuffer: []
   sampleRate: 0
+--- !u!4 &1984159837 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4755890394075834, guid: efe266538a8dcda4dbd04fbff7997053,
+    type: 3}
+  m_PrefabInstance: {fileID: 1069487482}
+  m_PrefabAsset: {fileID: 0}

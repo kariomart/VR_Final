@@ -37,6 +37,7 @@ public class SynthController : MonoBehaviour
     void Start()
     {
         source = GetComponent<AudioSource>();
+        synth = GetComponent<HelmController>();
         defaultPos = hand.position; 
 
     }
@@ -166,10 +167,10 @@ public class SynthController : MonoBehaviour
     void VRInput() {
 
         if (left) {
-            source.volume=OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
+            //source.volume=OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
             Vector2 leftThumbstickVal = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
         } else {
-            source.volume=OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger);  
+           // source.volume=OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger);  
             Vector2 rightThumbstickVal = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
         }
 
