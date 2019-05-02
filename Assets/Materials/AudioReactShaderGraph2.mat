@@ -21,7 +21,7 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - _AudioInput: 0
-    - _ShaderColor: 0
+    - _ShaderColor: 22.85
     - _ShaderTime: 0
     m_Colors:
-    - _AlbedoInputColor: {r: 0.6389294, g: 0.05833925, b: 0.6509434, a: 0}
+    - _AlbedoInputColor: {r: 0.15566039, g: 0.9599199, b: 1, a: 0}
