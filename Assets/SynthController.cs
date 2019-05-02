@@ -85,7 +85,7 @@ public class SynthController : MonoBehaviour
     void NoteOff(int index)
     {
         if (synth) {
-            synth.NoteOff(GetKeyFromIndex(index));
+            synth.NoteOff(GetKeyFromIndex(48+index));
         }
 
     }
