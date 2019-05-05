@@ -33,6 +33,7 @@ public class SynthController : MonoBehaviour
     Vector2 leftThumbstickVal;
     Vector2 rightThumbstickVal;
 
+
     void Start()
     {
         source = GetComponent<AudioSource>();
@@ -51,7 +52,7 @@ public class SynthController : MonoBehaviour
         float diffX = hand.position.x - defaultPos.x;
         source.panStereo = getPan(diffX);
 
-        Debug.Log(noteMin);
+        //Debug.Log(noteMin);
         int tempNote = noteMin + Mathf.RoundToInt(diffY);
         Debug.Log(tempNote + "\n" + diffY);
 
@@ -71,6 +72,7 @@ public class SynthController : MonoBehaviour
         }
 
         SetFilter();
+        Debug.Log(leftThumbstickVal);
 
     }
 
@@ -138,11 +140,11 @@ public class SynthController : MonoBehaviour
         
         if (vrEnabled) {
             if (left) {
-                synth.SetParameterAtIndex(4, leftThumbstickVal.x);
+                synth.SetParameterAtIndex(3, leftThumbstickVal.x);
                 synth.SetParameterAtIndex(4, leftThumbstickVal.y);
             } else {
-                synth.SetParameterAtIndex(5, rightThumbstickVal.x);
-                synth.SetParameterAtIndex(5, rightThumbstickVal.y);
+                synth.SetParameterAtIndex(3, rightThumbstickVal.x);
+                synth.SetParameterAtIndex(4, rightThumbstickVal.y);
             }
         }
     }
@@ -174,6 +176,34 @@ public class SynthController : MonoBehaviour
             Vector2 rightThumbstickVal = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
         }
 
+        if (left)
+        {
+            if (OVRInput.GetDown(OVRInput.RawButton.X))
+            {
+                if (synth.GetParameterAtIndex(5) == 1)
+                {
+                    synth.SetParameterAtIndex(5, 0);
+                }
+                else
+                {
+                    synth.SetParameterAtIndex(5, 1);
+                }
+            }
+        } else
+        {
+            if (OVRInput.GetDown(OVRInput.RawButton.A))
+            {
+                if (synth.GetParameterAtIndex(5) == 1)
+                {
+                    synth.SetParameterAtIndex(5, 0);
+                }
+                else
+                {
+                    synth.SetParameterAtIndex(5, 1);
+                }
+            }
+
+        }
 
 
     }
