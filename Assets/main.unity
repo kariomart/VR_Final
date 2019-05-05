@@ -233,7 +233,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243620331226199118, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 696767634}
+  m_audioClip: {fileID: 1798897068}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -354,13 +354,12 @@ MonoBehaviour:
   defaultPos: {x: 0, y: 0}
   scale: 0000000002000000040000000500000007000000090000000b000000
   octaveSize: 12
-  minNote: 0
   octaveSpan: 0
   numKeys: 60
   startingKey: 24
   rangeOfMovementX: 1
   rangeOfMovementY: 1
-  noteMin: 0
+  noteMin: 48
   noteMax: 0
 --- !u!114 &193178197
 MonoBehaviour:
@@ -375,14 +374,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   analyzer: {fileID: 0}
-  smoothing: 0.75
-  shaderTimeAmount: 0
-  shaderTimeLowBound: 0
-  shaderTimeHighBound: 0
-  shaderDisplaceAmount: 0
-  shaderColorAmount: 0
-  shaderColorLowBound: 0
-  shaderColorHighBound: 0
+  smoothing: 0.1
+  shaderTimeAmount: 0.05
+  shaderTimeLowBound: 50
+  shaderTimeHighBound: 300
+  shaderDisplaceAmount: 2.51
+  shaderColorAmount: 59
+  shaderColorLowBound: 7243
+  shaderColorHighBound: 16798
   reactiveGameObject: {fileID: 332505301}
   myMaterial: {fileID: 0}
 --- !u!114 &193178198
@@ -563,12 +562,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332505301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13, y: 0.84, z: 0}
+  m_LocalPosition: {x: -0.13, y: 0.84, z: 22.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!83 &388020199
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &420666696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,34 +1347,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8c2ddbd2999544428e9799ccc8951ab, type: 3}
---- !u!83 &572094400
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 48000
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!114 &661422741 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114000012052126696, guid: e8c2ddbd2999544428e9799ccc8951ab,
@@ -1366,34 +1365,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1069487482}
   m_PrefabAsset: {fileID: 0}
---- !u!83 &696767634
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 48000
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!1001 &1069487482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1785,6 +1756,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!83 &1798897068
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &1948717422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,7 +1819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   channel: 1
-  synthParamValue0: 0
+  synthParamValue0: 0.735
   synthParamValue1: 0.375
   synthParamValue2: 1
   synthParamValue3: 0
@@ -1842,7 +1841,7 @@ MonoBehaviour:
     parent: {fileID: 1948717423}
     minimumRange: 0
     maximumRange: 1
-    paramValue_: 0
+    paramValue_: 0.735
   - parameter_: 31
     scaleType: 1
     parent: {fileID: 1948717423}
@@ -1898,7 +1897,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243472660568356628, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 572094400}
+  m_audioClip: {fileID: 388020199}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1992,7 +1991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948717422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4.94, z: 0.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 320130055}
@@ -2019,13 +2018,12 @@ MonoBehaviour:
   defaultPos: {x: 0, y: 0}
   scale: 0000000002000000040000000500000007000000090000000b000000
   octaveSize: 12
-  minNote: 0
   octaveSpan: 0
   numKeys: 60
   startingKey: 24
   rangeOfMovementX: 1
   rangeOfMovementY: 1
-  noteMin: 0
+  noteMin: 36
   noteMax: 0
 --- !u!114 &1948717428
 MonoBehaviour:
@@ -2041,13 +2039,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analyzer: {fileID: 0}
   smoothing: 0.75
-  shaderTimeAmount: 0
-  shaderTimeLowBound: 0
-  shaderTimeHighBound: 0
-  shaderDisplaceAmount: 0
-  shaderColorAmount: 0
-  shaderColorLowBound: 0
-  shaderColorHighBound: 0
+  shaderTimeAmount: 0.05
+  shaderTimeLowBound: 50
+  shaderTimeHighBound: 300
+  shaderDisplaceAmount: 2.51
+  shaderColorAmount: 59
+  shaderColorLowBound: 7243
+  shaderColorHighBound: 16798
   reactiveGameObject: {fileID: 332505301}
   myMaterial: {fileID: 0}
 --- !u!114 &1948717429

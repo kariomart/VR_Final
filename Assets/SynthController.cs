@@ -16,7 +16,6 @@ public class SynthController : MonoBehaviour
 
     public int[] scale = {0, 2, 4, 5, 7, 9, 11 };
     public int octaveSize = 12;
-    public int minNote;
     public int octaveSpan;
 
     public int numKeys = 60;
@@ -52,13 +51,14 @@ public class SynthController : MonoBehaviour
         float diffX = hand.position.x - defaultPos.x;
         source.panStereo = getPan(diffX);
 
-        int tempNote = Mathf.RoundToInt(noteMin + diffY);
+        Debug.Log(noteMin);
+        int tempNote = noteMin + Mathf.RoundToInt(diffY);
+        Debug.Log(tempNote + "\n" + diffY);
 
         if (tempNote != currentNote) {
             ChordOff(currentNote);
             currentNote = tempNote;
             ChordOn(currentNote);
-            Debug.Log(diffY + " " + currentNote);
         }
 
         if (Input.GetKeyDown(KeyCode.A)) {
@@ -133,8 +133,8 @@ public class SynthController : MonoBehaviour
         float val = hand.transform.position.x;
         val = Remap(val, -10f, 10f, 0, rangeOfMovementX);  
         val = Mathf.Clamp(val, 0, 1);
-        synth.SetParameterAtIndex(0, .5f+val);
-        synth.SetParameterAtIndex(1, 1-val);
+        //synth.SetParameterAtIndex(0, .5f+val);
+        //synth.SetParameterAtIndex(1, 1-val);
         
         if (vrEnabled) {
             if (left) {
@@ -167,10 +167,10 @@ public class SynthController : MonoBehaviour
     void VRInput() {
 
         if (left) {
-            //source.volume=OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
+            source.volume=1-OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
             Vector2 leftThumbstickVal = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
         } else {
-           // source.volume=OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger);  
+            source.volume=1-OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger);  
             Vector2 rightThumbstickVal = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
         }
 
