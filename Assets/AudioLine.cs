@@ -59,6 +59,7 @@ public class AudioLine : MonoBehaviour {
         aSource.GetOutputData(audioData, 0);
 
 
+
         
         //assign the y position of the corresponding line point
         for (int i = 0; i < numLinePoints; i++) {

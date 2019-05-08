@@ -295,7 +295,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243620331226199118, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 505358847}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 332505304}
   - component: {fileID: 332505303}
   - component: {fileID: 332505302}
+  - component: {fileID: 332505305}
   m_Layer: 0
   m_Name: Visualizer
   m_TagString: Untagged
@@ -630,6 +631,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &332505305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332505301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875c80eb7932a414fbc6b3bd10b3cc2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 0}
+  pt: {x: 0, y: 0, z: 0}
+  pts:
+  - {x: 0, y: 0, z: 0}
 --- !u!1 &420666696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,6 +1398,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8c2ddbd2999544428e9799ccc8951ab, type: 3}
+--- !u!83 &505358847
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!114 &661422741 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114000012052126696, guid: e8c2ddbd2999544428e9799ccc8951ab,
@@ -1399,6 +1444,34 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1069487482}
   m_PrefabAsset: {fileID: 0}
+--- !u!83 &864592532
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1001 &1069487482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1891,13 +1964,14 @@ GameObject:
   - component: {fileID: 1379984408}
   - component: {fileID: 1379984407}
   - component: {fileID: 1379984406}
+  - component: {fileID: 1379984409}
   m_Layer: 0
   m_Name: line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1379984406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1905,13 +1979,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379984405}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d37d2c252596e47a4a49b1dfad521313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aSource: {fileID: 193178192}
+  aSource: {fileID: 1948717425}
   lineRenderer: {fileID: 0}
+  lineStartLocation: {fileID: 1984159837}
   numLinePoints: 128
   lineSpacing: 1
   audioScaling: 10
@@ -1934,7 +2009,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bcca8ad2660164bd3aef0ef4a683ffcd, type: 2}
+  - {fileID: 2100000, guid: 02c55b6ca0ec82a41b836e4e16f81c11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1959,7 +2034,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.5
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -2026,6 +2101,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1379984409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379984405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc12f99ee9f173498a640d39c735689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  meshController: {fileID: 332505305}
+  line: {fileID: 0}
+  startPos: {fileID: 1984159837}
 --- !u!1 &1492609787
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,7 +2560,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243472660568356628, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 864592532}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

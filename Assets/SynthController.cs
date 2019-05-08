@@ -171,7 +171,7 @@ public class SynthController : MonoBehaviour
         if (left) {
             source.volume=1-OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
             //leftThumbstickVal = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
-            leftThumbstickVal = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.All);
+            leftThumbstickVal = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Active);
         } else {
             source.volume=1-OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger);  
             rightThumbstickVal = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
