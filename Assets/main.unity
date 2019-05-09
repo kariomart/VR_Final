@@ -153,6 +153,8 @@ Transform:
   - {fileID: 1346442788}
   - {fileID: 759328269}
   - {fileID: 1658775876}
+  - {fileID: 1431127986}
+  - {fileID: 773592511}
   m_Father: {fileID: 1200456034}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -305,7 +307,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243620331226199118, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 1779942374}
+  m_audioClip: {fileID: 315632212}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -499,7 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   analyzer: {fileID: 0}
-  smoothing: 0.1
+  smoothing: 0.05
   shaderTimeAmount: 0.05
   shaderTimeLowBound: 50
   shaderTimeHighBound: 300
@@ -935,6 +937,34 @@ MonoBehaviour:
       - source: fil_envelope
         destination: cutoff
         amount: -6.4831023
+--- !u!83 &315632212
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &320130054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332505301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13, y: 4.1, z: 22.1}
+  m_LocalPosition: {x: -0.13, y: 4.1, z: 41.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1134,6 +1164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handMat: {fileID: 2100000, guid: 185ab47c82b0a444189f2b398a1b1178, type: 2}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!1 &420666696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,6 +2336,205 @@ MonoBehaviour:
       - source: mono_lfo_2
         destination: osc_feedback_transpose
         amount: 19.584
+--- !u!1 &773592510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773592511}
+  - component: {fileID: 773592512}
+  m_Layer: 0
+  m_Name: patch6 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773592511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773592510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 31696414}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773592512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773592510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patchObject: {fileID: 102900000, guid: cd0732f427159ce4aba2cb19c462e83d, type: 3}
+  patchData:
+    license: Patch (c) by SF.  This patch is licensed under a Creative Commons Attribution
+      4.0 International License.  You should have received a copy of the license along
+      with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    synth_version: 0.9.0
+    patch_name: SF Mandolin
+    folder_name: Pad
+    author: SF
+    settings:
+      amp_attack: 0.45070425
+      amp_decay: 3.2651277
+      amp_release: 1.553208
+      amp_sustain: 0.061856806
+      arp_frequency: 2
+      arp_gate: 0.5
+      arp_octaves: 1
+      arp_on: 0
+      arp_pattern: 0
+      arp_sync: 1
+      arp_tempo: 9
+      beats_per_minute: 1.5833334
+      cross_modulation: 0
+      cutoff: 60.175
+      delay_dry_wet: 0.5
+      delay_feedback: 0.39999998
+      delay_frequency: 2.0000002
+      delay_on: 0
+      delay_sync: 1
+      delay_tempo: 9
+      distortion_drive: 18.649454
+      distortion_mix: 1
+      distortion_on: 1
+      distortion_type: 0
+      fil_attack: 0
+      fil_decay: 3.9495144
+      fil_env_depth: 30.34404
+      fil_release: 0.11534026
+      fil_sustain: 0
+      filter_blend: 0
+      filter_drive: 0
+      filter_on: 1
+      filter_saturation: 0
+      filter_shelf: 0
+      filter_style: 0
+      filter_type: 0
+      formant_on: 0
+      formant_x: 0.4857143
+      formant_y: 0.509434
+      keytrack: 0.9779537
+      legato: 1
+      mod_attack: 0
+      mod_decay: 1.5
+      mod_release: 1.5
+      mod_sustain: 0.5
+      mono_lfo_1_amplitude: 1
+      mono_lfo_1_frequency: 1.0000002
+      mono_lfo_1_retrigger: 0
+      mono_lfo_1_sync: 1
+      mono_lfo_1_tempo: 6
+      mono_lfo_1_waveform: 0
+      mono_lfo_2_amplitude: 1
+      mono_lfo_2_frequency: 3.1177077
+      mono_lfo_2_retrigger: 0
+      mono_lfo_2_sync: 0
+      mono_lfo_2_tempo: 8
+      mono_lfo_2_waveform: 0
+      noise_volume: 0.046291888
+      num_steps: 8
+      osc_1_transpose: 0
+      osc_1_tune: 0
+      osc_1_unison_detune: 21.96875
+      osc_1_unison_voices: 3
+      osc_1_volume: 0
+      osc_1_waveform: 4
+      osc_2_transpose: 0
+      osc_2_tune: 0
+      osc_2_unison_detune: 17.13125
+      osc_2_unison_voices: 3
+      osc_2_volume: 0
+      osc_2_waveform: 0
+      osc_feedback_amount: 0.0019967556
+      osc_feedback_transpose: 0
+      osc_feedback_tune: 0
+      osc_mix: 0
+      pitch_bend_range: 2
+      poly_lfo_amplitude: 1
+      poly_lfo_frequency: 1.0000002
+      poly_lfo_sync: 1
+      poly_lfo_tempo: 7
+      poly_lfo_waveform: 0
+      polyphony: 4
+      portamento: -8.52675
+      portamento_type: 1
+      resonance: 0.14179105
+      reverb_damping: 0.13128126
+      reverb_dry_wet: 0.62016493
+      reverb_feedback: 0.9070358
+      reverb_on: 1
+      step_frequency: 1.9999999
+      step_seq_00: 0
+      step_seq_01: 0
+      step_seq_02: 0
+      step_seq_03: 0
+      step_seq_04: 0
+      step_seq_05: 0
+      step_seq_06: 0
+      step_seq_07: 0
+      step_seq_08: 0
+      step_seq_09: 0
+      step_seq_10: 0
+      step_seq_11: 0
+      step_seq_12: 0
+      step_seq_13: 0
+      step_seq_14: 0
+      step_seq_15: 0
+      step_seq_16: 0
+      step_seq_17: 0
+      step_seq_18: 0
+      step_seq_19: 0
+      step_seq_20: 0
+      step_seq_21: 0
+      step_seq_22: 0
+      step_seq_23: 0
+      step_seq_24: 0
+      step_seq_25: 0
+      step_seq_26: 0
+      step_seq_27: 0
+      step_seq_28: 0
+      step_seq_29: 0
+      step_seq_30: 0
+      step_seq_31: 0
+      step_sequencer_retrigger: 0
+      step_sequencer_sync: 1
+      step_sequencer_tempo: 7
+      step_smoothing: 0
+      stutter_frequency: 3
+      stutter_on: 0
+      stutter_resample_frequency: 1.0000002
+      stutter_resample_sync: 1
+      stutter_resample_tempo: 6
+      stutter_softness: 0
+      stutter_sync: 1
+      stutter_tempo: 8
+      sub_octave: 0
+      sub_shuffle: 0
+      sub_volume: 0
+      sub_waveform: 2
+      unison_1_harmonize: 0
+      unison_2_harmonize: 0
+      velocity_track: 1
+      volume: 1.1506972
+      modulations:
+      - source: mono_lfo_2
+        destination: osc_1_volume
+        amount: -0.21776496
 --- !u!1001 &1069487482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2556,34 +2787,6 @@ MonoBehaviour:
       - source: mono_lfo_1
         destination: cutoff
         amount: 0.0068997717
---- !u!83 &1109369489
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 48000
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!1 &1112644443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2909,6 +3112,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!83 &1328130115
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &1345026947
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,6 +3620,211 @@ MonoBehaviour:
   meshController: {fileID: 332505305}
   line: {fileID: 0}
   startPos: {fileID: 1984159837}
+--- !u!1 &1431127985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431127986}
+  - component: {fileID: 1431127987}
+  m_Layer: 0
+  m_Name: patch6 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431127986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431127985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 31696414}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1431127987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431127985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patchObject: {fileID: 102900000, guid: 04b287429506fec448b00d1f25cc77c1, type: 3}
+  patchData:
+    license: Patch (c) by Matt Tytel.  This patch is licensed under a Creative Commons
+      Attribution 4.0 International License.  You should have received a copy of the
+      license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    synth_version: 0.9.0
+    patch_name: MT Chamber Chatter
+    folder_name: Pad
+    author: Matt Tytel
+    settings:
+      amp_attack: 0.8912656
+      amp_decay: 1.5
+      amp_release: 1.117647
+      amp_sustain: 1
+      arp_frequency: 2
+      arp_gate: 0.5
+      arp_octaves: 1
+      arp_on: 0
+      arp_pattern: 0
+      arp_sync: 1
+      arp_tempo: 9
+      beats_per_minute: 2
+      cross_modulation: 0.282
+      cutoff: 82.45
+      delay_dry_wet: 0.48400408
+      delay_feedback: -0.776
+      delay_frequency: 3.232
+      delay_on: 1
+      delay_sync: 0
+      delay_tempo: 8
+      distortion_drive: 5.396248
+      distortion_mix: 1
+      distortion_on: 1
+      distortion_type: 0
+      fil_attack: 0.7724302
+      fil_decay: 3.1491382
+      fil_env_depth: 0
+      fil_release: 1.5
+      fil_sustain: 0.5
+      filter_blend: 0
+      filter_drive: -12
+      filter_on: 1
+      filter_saturation: 0
+      filter_shelf: 0
+      filter_style: 0
+      filter_type: 0
+      formant_on: 0
+      formant_x: 0.10714286
+      formant_y: 1
+      keytrack: 0.664
+      legato: 0
+      mod_attack: 0
+      mod_decay: 1.5
+      mod_release: 1.5
+      mod_sustain: 0.5
+      mono_lfo_1_amplitude: 1
+      mono_lfo_1_frequency: 1
+      mono_lfo_1_retrigger: 0
+      mono_lfo_1_sync: 1
+      mono_lfo_1_tempo: 6
+      mono_lfo_1_waveform: 0
+      mono_lfo_2_amplitude: 1
+      mono_lfo_2_frequency: 1
+      mono_lfo_2_retrigger: 0
+      mono_lfo_2_sync: 1
+      mono_lfo_2_tempo: 2
+      mono_lfo_2_waveform: 0
+      noise_volume: 0
+      num_steps: 8
+      osc_1_transpose: 5
+      osc_1_tune: 0
+      osc_1_unison_detune: 19.2
+      osc_1_unison_voices: 15
+      osc_1_volume: 0.35355338
+      osc_1_waveform: 3
+      osc_2_transpose: 0
+      osc_2_tune: 0
+      osc_2_unison_detune: 15.6
+      osc_2_unison_voices: 15
+      osc_2_volume: 0.35355338
+      osc_2_waveform: 3
+      osc_feedback_amount: 0.912
+      osc_feedback_transpose: 5
+      osc_feedback_tune: 0.192
+      osc_mix: 0
+      pitch_bend_range: 2
+      poly_lfo_amplitude: -0.014084507
+      poly_lfo_frequency: 1
+      poly_lfo_sync: 1
+      poly_lfo_tempo: 9
+      poly_lfo_waveform: 0
+      polyphony: 4
+      portamento: -9
+      portamento_type: 0
+      resonance: 0
+      reverb_damping: 0.328
+      reverb_dry_wet: 0.5
+      reverb_feedback: 0.9112
+      reverb_on: 1
+      step_frequency: 2
+      step_seq_00: 0
+      step_seq_01: 0
+      step_seq_02: 0
+      step_seq_03: 0
+      step_seq_04: 0
+      step_seq_05: 0
+      step_seq_06: 0
+      step_seq_07: 0
+      step_seq_08: 0
+      step_seq_09: 0
+      step_seq_10: 0
+      step_seq_11: 0
+      step_seq_12: 0
+      step_seq_13: 0
+      step_seq_14: 0
+      step_seq_15: 0
+      step_seq_16: 0
+      step_seq_17: 0
+      step_seq_18: 0
+      step_seq_19: 0
+      step_seq_20: 0
+      step_seq_21: 0
+      step_seq_22: 0
+      step_seq_23: 0
+      step_seq_24: 0
+      step_seq_25: 0
+      step_seq_26: 0
+      step_seq_27: 0
+      step_seq_28: 0
+      step_seq_29: 0
+      step_seq_30: 0
+      step_seq_31: 0
+      step_sequencer_retrigger: 0
+      step_sequencer_sync: 1
+      step_sequencer_tempo: 7
+      step_smoothing: 0
+      stutter_frequency: 3.26
+      stutter_on: 1
+      stutter_resample_frequency: 1.308
+      stutter_resample_sync: 0
+      stutter_resample_tempo: 6
+      stutter_softness: 0.544
+      stutter_sync: 0
+      stutter_tempo: 8
+      sub_octave: 0
+      sub_shuffle: 0
+      sub_volume: 0
+      sub_waveform: 2
+      unison_1_harmonize: 0
+      unison_2_harmonize: 0
+      velocity_track: 0
+      volume: 0.7416248
+      modulations:
+      - source: poly_lfo
+        destination: osc_2_tune
+        amount: 0.168
+      - source: fil_envelope
+        destination: poly_lfo_amplitude
+        amount: 0.9644595
+      - source: poly_lfo
+        destination: osc_1_tune
+        amount: 0.144
 --- !u!1 &1440340050
 GameObject:
   m_ObjectHideFlags: 0
@@ -3870,34 +4306,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!83 &1779942374
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 48000
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!1 &1782656676
 GameObject:
   m_ObjectHideFlags: 0
@@ -3941,19 +4349,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: 655930afcdef14c458806cb663ae03a5, type: 3}
+  patchObject: {fileID: 102900000, guid: 1406c4d70edad6c43996493fd73c4f92, type: 3}
   patchData:
     license: Patch (c) by Cris Owl Alvarez.  This patch is licensed under a Creative
       Commons Attribution 4.0 International License.  You should have received a copy
       of the license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: Pad_2
-    folder_name: SynthPatches
+    patch_name: COA Pulsating Pad
+    folder_name: Pad
     author: Cris Owl Alvarez
     settings:
-      amp_attack: 0.87362134
+      amp_attack: 1.117647
       amp_decay: 1.5
-      amp_release: 1.2941177
+      amp_release: 0.3
       amp_sustain: 1
       arp_frequency: 2
       arp_gate: 0.5
@@ -3963,68 +4371,68 @@ MonoBehaviour:
       arp_sync: 1
       arp_tempo: 9
       beats_per_minute: 2
-      cross_modulation: 0.29999998
-      cutoff: 79.36535
-      delay_dry_wet: 0.34
-      delay_feedback: 0.15199995
+      cross_modulation: 0.06200001
+      cutoff: 87.194496
+      delay_dry_wet: 0.5
+      delay_feedback: 0.39999998
       delay_frequency: 2.0000002
       delay_on: 0
       delay_sync: 1
       delay_tempo: 9
-      distortion_drive: 9.599998
+      distortion_drive: 0
       distortion_mix: 1
       distortion_on: 1
       distortion_type: 0
-      fil_attack: 0.1
+      fil_attack: 1
       fil_decay: 1.5
-      fil_env_depth: 4.095993
+      fil_env_depth: 0
       fil_release: 1.5
-      fil_sustain: 0.5
+      fil_sustain: 1
       filter_blend: 0
-      filter_drive: -12
+      filter_drive: -7.425
       filter_on: 1
       filter_saturation: 0
-      filter_shelf: 1
-      filter_style: 2
+      filter_shelf: 0
+      filter_style: 0
       filter_type: 0
       formant_on: 0
       formant_x: 0.5
       formant_y: 0.5
-      keytrack: 0
+      keytrack: 0.464
       legato: 0
-      mod_attack: 0
+      mod_attack: 0.1
       mod_decay: 1.5
       mod_release: 1.5
       mod_sustain: 0.5
-      mono_lfo_1_amplitude: 1
+      mono_lfo_1_amplitude: 0.014084458
       mono_lfo_1_frequency: 1.0000002
       mono_lfo_1_retrigger: 0
       mono_lfo_1_sync: 1
-      mono_lfo_1_tempo: 6
+      mono_lfo_1_tempo: 11
       mono_lfo_1_waveform: 0
       mono_lfo_2_amplitude: 1
       mono_lfo_2_frequency: 1.0000002
       mono_lfo_2_retrigger: 0
       mono_lfo_2_sync: 1
-      mono_lfo_2_tempo: 7
+      mono_lfo_2_tempo: 2
       mono_lfo_2_waveform: 0
       noise_volume: 0
       num_steps: 8
       osc_1_transpose: -12
       osc_1_tune: 0
       osc_1_unison_detune: 0
-      osc_1_unison_voices: 15
-      osc_1_volume: 0.35355338
+      osc_1_unison_voices: 3
+      osc_1_volume: 0.49207556
       osc_1_waveform: 0
       osc_2_transpose: 0
       osc_2_tune: 0
-      osc_2_unison_detune: 0
-      osc_2_unison_voices: 13
-      osc_2_volume: 0.36555523
-      osc_2_waveform: 5
-      osc_feedback_amount: -0.41599995
-      osc_feedback_transpose: 0
-      osc_feedback_tune: 0.37600005
+      osc_2_unison_detune: 2
+      osc_2_unison_voices: 3
+      osc_2_volume: 0.5078008
+      osc_2_waveform: 0
+      osc_feedback_amount: 0.536
+      osc_feedback_transpose: 6
+      osc_feedback_tune: 0.11199999
       osc_mix: 0
       pitch_bend_range: 2
       poly_lfo_amplitude: 1
@@ -4032,13 +4440,13 @@ MonoBehaviour:
       poly_lfo_sync: 1
       poly_lfo_tempo: 7
       poly_lfo_waveform: 0
-      polyphony: 16
-      portamento: -9
-      portamento_type: 0
-      resonance: 0.5
+      polyphony: 4
+      portamento: -4.072
+      portamento_type: 1
+      resonance: 0.25694445
       reverb_damping: 0.5
-      reverb_dry_wet: 0.5
-      reverb_feedback: 0.9184
+      reverb_dry_wet: 0.53993607
+      reverb_feedback: 0.9
       reverb_on: 1
       step_frequency: 1.9999999
       step_seq_00: 0
@@ -4077,23 +4485,32 @@ MonoBehaviour:
       step_sequencer_sync: 1
       step_sequencer_tempo: 7
       step_smoothing: 0
-      stutter_frequency: 2.152
-      stutter_on: 1
-      stutter_resample_frequency: 2.6280003
-      stutter_resample_sync: 0
+      stutter_frequency: 3.0000002
+      stutter_on: 0
+      stutter_resample_frequency: 1.0000002
+      stutter_resample_sync: 1
       stutter_resample_tempo: 6
       stutter_softness: 0
-      stutter_sync: 0
+      stutter_sync: 1
       stutter_tempo: 8
       sub_octave: 1
       sub_shuffle: 0
-      sub_volume: 0.50628847
-      sub_waveform: 10
-      unison_1_harmonize: 0
-      unison_2_harmonize: 0
-      velocity_track: 0
-      volume: 0.94742423
-      modulations: []
+      sub_volume: 0
+      sub_waveform: 0
+      unison_1_harmonize: 1
+      unison_2_harmonize: 1
+      velocity_track: -0.015999973
+      volume: 1.1017737
+      modulations:
+      - source: fil_envelope
+        destination: cross_modulation
+        amount: 0.33
+      - source: mono_lfo_1
+        destination: cutoff
+        amount: 17.01656
+      - source: mono_lfo_2
+        destination: mono_lfo_1_amplitude
+        amount: 0.37072146
 --- !u!1 &1861108593
 GameObject:
   m_ObjectHideFlags: 0
@@ -4406,7 +4823,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243472660568356628, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 1109369489}
+  m_audioClip: {fileID: 1328130115}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

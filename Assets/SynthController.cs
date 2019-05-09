@@ -66,8 +66,8 @@ public class SynthController : MonoBehaviour
 
         float diffX = hand.position.x - defaultPos.x;
         source.panStereo = getPan(diffX);
-        synth.SetParameterAtIndex(3, Remap(diffX, -1f, 1f, 0f, 1f));
-        synth.SetParameterAtIndex(4, Remap(diffY, -5f, 5f, 0f, 1f));
+        //synth.SetParameterAtIndex(3, Remap(diffX, -1f, 1f, 0f, 1f));
+        //synth.SetParameterAtIndex(4, Remap(diffY, -5f, 5f, 0f, 1f));
 
         //Debug.Log(noteMin);
         int tempNote = noteMin + Mathf.RoundToInt(diffY);
@@ -213,8 +213,11 @@ public class SynthController : MonoBehaviour
             {
                 patchIndex++;
                 patchIndex %= arpPatches.Length;
+                ChordOff(currentNote);
+                source.volume = 0;
                 synth.LoadPatch(arpPatches[patchIndex]);
-                Debug.Log("trying to load");
+                source.volume = 1;
+                //Debug.Log("trying to load");
             }
         } else
         {
@@ -235,8 +238,11 @@ public class SynthController : MonoBehaviour
             {
                 patchIndex++;
                 patchIndex %= chordPatches.Length;
+                ChordOff(currentNote);
+                source.volume = 0;
                 synth.LoadPatch(chordPatches[patchIndex]);
-                Debug.Log("trying to load");
+                source.volume = 1;
+                //Debug.Log("trying to load");
             }
 
         }

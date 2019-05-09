@@ -18,7 +18,7 @@ public class VisualController : MonoBehaviour
     void Update()
     {
  
-        timer++;
+        //timer++;
        if (!leftHand) {
             leftHand = GameObject.Find("hand_left_renderPart_0").GetComponent<Renderer>();
         }
