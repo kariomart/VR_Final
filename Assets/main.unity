@@ -151,6 +151,8 @@ Transform:
   - {fileID: 1782656677}
   - {fileID: 250709450}
   - {fileID: 1346442788}
+  - {fileID: 759328269}
+  - {fileID: 1658775876}
   m_Father: {fileID: 1200456034}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -186,8 +188,6 @@ Transform:
   - {fileID: 727755624}
   - {fileID: 293054543}
   - {fileID: 1086388058}
-  - {fileID: 1506436978}
-  - {fileID: 1366107816}
   m_Father: {fileID: 1200456034}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -305,7 +305,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243620331226199118, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 984913795}
+  m_audioClip: {fileID: 1779942374}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -445,8 +445,8 @@ MonoBehaviour:
   - {fileID: 727755625}
   - {fileID: 293054544}
   - {fileID: 1086388059}
-  - {fileID: 1506436979}
-  - {fileID: 1366107817}
+  - {fileID: 0}
+  - {fileID: 0}
   patchIndex: 0
   leftController: 1
 --- !u!23 &193178196
@@ -568,19 +568,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: 87bbedacc2dd28145a35706f611f1a21, type: 3}
+  patchObject: {fileID: 102900000, guid: 4b1f45d44edf34443a9bffed6b5ea10b, type: 3}
   patchData:
-    license: Patch (c) by SF.  This patch is licensed under a Creative Commons Attribution
-      4.0 International License.  You should have received a copy of the license along
-      with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    license: Patch (c) by Cris Owl Alvarez.  This patch is licensed under a Creative
+      Commons Attribution 4.0 International License.  You should have received a copy
+      of the license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: SF Soft Pulse 2
-    folder_name: Pad
-    author: SF
+    patch_name: Pad_3
+    folder_name: SynthPatches
+    author: Cris Owl Alvarez
     settings:
-      amp_attack: 0.6656656
-      amp_decay: 1.2071896
-      amp_release: 1.5532095
+      amp_attack: 0.3136489
+      amp_decay: 1.3747702
+      amp_release: 2.4294577
       amp_sustain: 1
       arp_frequency: 2
       arp_gate: 0.5
@@ -590,66 +590,66 @@ MonoBehaviour:
       arp_sync: 1
       arp_tempo: 9
       beats_per_minute: 2
-      cross_modulation: 0
-      cutoff: 60.175
+      cross_modulation: 0.062
+      cutoff: 63.3895
       delay_dry_wet: 0.5
       delay_feedback: 0.39999998
       delay_frequency: 2.0000002
       delay_on: 0
       delay_sync: 1
       delay_tempo: 9
-      distortion_drive: 18.649454
+      distortion_drive: 0
       distortion_mix: 1
-      distortion_on: 1
+      distortion_on: 0
       distortion_type: 0
-      fil_attack: 0
-      fil_decay: 2.8713236
-      fil_env_depth: 30.34404
-      fil_release: 0.11534026
-      fil_sustain: 0
-      filter_blend: 0
-      filter_drive: -4.1735
-      filter_on: 1
+      fil_attack: 0.1
+      fil_decay: 1.5
+      fil_env_depth: 0
+      fil_release: 1.5
+      fil_sustain: 0.5
+      filter_blend: 2
+      filter_drive: 3.81
+      filter_on: 0
       filter_saturation: 0
       filter_shelf: 0
       filter_style: 0
       filter_type: 0
       formant_on: 0
-      formant_x: 0.4857143
-      formant_y: 0.509434
-      keytrack: 0.9779537
-      legato: 1
-      mod_attack: 0
+      formant_x: 0.5
+      formant_y: 0.5
+      keytrack: -0.096000016
+      legato: 0
+      mod_attack: 0.1
       mod_decay: 1.5
       mod_release: 1.5
       mod_sustain: 0.5
-      mono_lfo_1_amplitude: 1
-      mono_lfo_1_frequency: 1.0000002
+      mono_lfo_1_amplitude: 0.35211265
+      mono_lfo_1_frequency: 5.9511724
       mono_lfo_1_retrigger: 0
-      mono_lfo_1_sync: 1
+      mono_lfo_1_sync: 0
       mono_lfo_1_tempo: 6
-      mono_lfo_1_waveform: 0
+      mono_lfo_1_waveform: 12
       mono_lfo_2_amplitude: 1
-      mono_lfo_2_frequency: 3.1177077
+      mono_lfo_2_frequency: 5.570313
       mono_lfo_2_retrigger: 0
       mono_lfo_2_sync: 0
-      mono_lfo_2_tempo: 8
-      mono_lfo_2_waveform: 0
-      noise_volume: 0.046291888
+      mono_lfo_2_tempo: 7
+      mono_lfo_2_waveform: 12
+      noise_volume: 0.016
       num_steps: 8
-      osc_1_transpose: 0
+      osc_1_transpose: -12
       osc_1_tune: 0
-      osc_1_unison_detune: 21.96875
-      osc_1_unison_voices: 3
-      osc_1_volume: 0
-      osc_1_waveform: 4
+      osc_1_unison_detune: 64.84375
+      osc_1_unison_voices: 5
+      osc_1_volume: 0.5067148
+      osc_1_waveform: 1
       osc_2_transpose: 0
       osc_2_tune: 0
-      osc_2_unison_detune: 17.13125
-      osc_2_unison_voices: 3
-      osc_2_volume: 0.27666768
+      osc_2_unison_detune: 0
+      osc_2_unison_voices: 1
+      osc_2_volume: 0.5122358
       osc_2_waveform: 0
-      osc_feedback_amount: 0.0019967556
+      osc_feedback_amount: 0.33903122
       osc_feedback_transpose: 0
       osc_feedback_tune: 0
       osc_mix: 0
@@ -660,12 +660,12 @@ MonoBehaviour:
       poly_lfo_tempo: 7
       poly_lfo_waveform: 0
       polyphony: 4
-      portamento: -8.52675
-      portamento_type: 1
-      resonance: 0.14179105
-      reverb_damping: 0.13128126
-      reverb_dry_wet: 0.7609597
-      reverb_feedback: 0.8576969
+      portamento: -9
+      portamento_type: 0
+      resonance: 0.104166664
+      reverb_damping: 0.5980625
+      reverb_dry_wet: 0.7881929
+      reverb_feedback: 0.9596719
       reverb_on: 1
       step_frequency: 1.9999999
       step_seq_00: 0
@@ -704,7 +704,7 @@ MonoBehaviour:
       step_sequencer_sync: 1
       step_sequencer_tempo: 7
       step_smoothing: 0
-      stutter_frequency: 3
+      stutter_frequency: 3.0000002
       stutter_on: 0
       stutter_resample_frequency: 1.0000002
       stutter_resample_sync: 1
@@ -712,18 +712,21 @@ MonoBehaviour:
       stutter_softness: 0
       stutter_sync: 1
       stutter_tempo: 8
-      sub_octave: 0
+      sub_octave: 1
       sub_shuffle: 0
       sub_volume: 0
-      sub_waveform: 2
+      sub_waveform: 0
       unison_1_harmonize: 0
-      unison_2_harmonize: 0
-      velocity_track: 0
-      volume: 0.9976225
+      unison_2_harmonize: 1
+      velocity_track: -0.055999994
+      volume: 1.0412812
       modulations:
+      - source: mono_lfo_1
+        destination: noise_volume
+        amount: 0.056
       - source: mono_lfo_2
-        destination: osc_1_volume
-        amount: -0.21776496
+        destination: osc_1_unison_detune
+        amount: 64.8
 --- !u!1 &293054542
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,106 +770,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: 62520e03161c8c84ca8e7660aea73c60, type: 3}
+  patchObject: {fileID: 102900000, guid: cf26506328f33421983c4f740bc898ef, type: 3}
   patchData:
-    license: Patch (c) by Matt Tytel.  This patch is licensed under a Creative Commons
-      Attribution 4.0 International License.  You should have received a copy of the
-      license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    license: Patch (c) by Cris Owl Alvarez.  This patch is licensed under a Creative
+      Commons Attribution 4.0 International License.  You should have received a copy
+      of the license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: on the run
-    folder_name: Arp
-    author: Matt Tytel
+    patch_name: Arp_4
+    folder_name: SynthPatches
+    author: Cris Owl Alvarez
     settings:
-      amp_attack: 0.1
-      amp_decay: 1.5
-      amp_release: 0.23483269
-      amp_sustain: 1
+      amp_attack: 0.11718751
+      amp_decay: 1.117647
+      amp_release: 0.11764706
+      amp_sustain: 0
       arp_frequency: 2
-      arp_gate: 0.46359375
-      arp_octaves: 3
+      arp_gate: 0.5
+      arp_octaves: 1
       arp_on: 1
-      arp_pattern: 2
-      arp_sync: 3
-      arp_tempo: 8
+      arp_pattern: 0
+      arp_sync: 1
+      arp_tempo: 9
       beats_per_minute: 2
       cross_modulation: 0
-      cutoff: 65.5375
-      delay_dry_wet: 0.46420226
-      delay_feedback: -0.41515625
-      delay_frequency: 2
-      delay_on: 1
+      cutoff: 125.35
+      delay_dry_wet: 0.5
+      delay_feedback: 0.39999998
+      delay_frequency: 2.0000002
+      delay_on: 0
       delay_sync: 1
-      delay_tempo: 8
-      distortion_drive: 12
+      delay_tempo: 9
+      distortion_drive: 24.78
       distortion_mix: 1
       distortion_on: 1
       distortion_type: 0
-      fil_attack: 0
-      fil_decay: 1.4854426
-      fil_env_depth: 38.456
-      fil_release: 2.3068051
+      fil_attack: 0.11764706
+      fil_decay: 0
+      fil_env_depth: 0
+      fil_release: 0
       fil_sustain: 0
       filter_blend: 0
-      filter_drive: -12
+      filter_drive: -4.2895
       filter_on: 1
       filter_saturation: 0
       filter_shelf: 0
       filter_style: 0
       filter_type: 0
       formant_on: 0
-      formant_x: 0.5
-      formant_y: 0.5
-      keytrack: 0
+      formant_x: 0.55714285
+      formant_y: 0.8198198
+      keytrack: 1
       legato: 0
       mod_attack: 0
       mod_decay: 1.5
       mod_release: 1.5
       mod_sustain: 0.5
       mono_lfo_1_amplitude: 1
-      mono_lfo_1_frequency: 1
+      mono_lfo_1_frequency: 6
       mono_lfo_1_retrigger: 0
-      mono_lfo_1_sync: 1
-      mono_lfo_1_tempo: 3
-      mono_lfo_1_waveform: 0
+      mono_lfo_1_sync: 0
+      mono_lfo_1_tempo: 11
+      mono_lfo_1_waveform: 12
       mono_lfo_2_amplitude: 1
-      mono_lfo_2_frequency: 1
+      mono_lfo_2_frequency: 1.0000002
       mono_lfo_2_retrigger: 0
       mono_lfo_2_sync: 1
       mono_lfo_2_tempo: 7
       mono_lfo_2_waveform: 0
       noise_volume: 0
       num_steps: 8
-      osc_1_transpose: -12
+      osc_1_transpose: 28.000002
       osc_1_tune: 0
-      osc_1_unison_detune: 14.745313
-      osc_1_unison_voices: 11
-      osc_1_volume: 0.37991783
-      osc_1_waveform: 5
-      osc_2_transpose: -5
-      osc_2_tune: 0
-      osc_2_unison_detune: 10.965625
-      osc_2_unison_voices: 9
-      osc_2_volume: 0.39763537
-      osc_2_waveform: 5
-      osc_feedback_amount: 0.1114375
-      osc_feedback_transpose: 4
-      osc_feedback_tune: 0
+      osc_1_unison_detune: 0
+      osc_1_unison_voices: 15
+      osc_1_volume: 0.47417587
+      osc_1_waveform: 3
+      osc_2_transpose: 19.999998
+      osc_2_tune: 0.016000032
+      osc_2_unison_detune: 0
+      osc_2_unison_voices: 15
+      osc_2_volume: 0.15861031
+      osc_2_waveform: 8
+      osc_feedback_amount: 0.098156266
+      osc_feedback_transpose: 0
+      osc_feedback_tune: -0.31199998
       osc_mix: 0
-      pitch_bend_range: 2
+      pitch_bend_range: 0
       poly_lfo_amplitude: 1
-      poly_lfo_frequency: 1
+      poly_lfo_frequency: 1.0000002
       poly_lfo_sync: 1
       poly_lfo_tempo: 7
       poly_lfo_waveform: 0
-      polyphony: 2
+      polyphony: 1
       portamento: -9
       portamento_type: 0
-      resonance: 0.4402985
+      resonance: 0.026666667
       reverb_damping: 0.5
-      reverb_dry_wet: 0.43928796
-      reverb_feedback: 0.9561625
+      reverb_dry_wet: 0.46803272
+      reverb_feedback: 0.83919996
       reverb_on: 1
-      step_frequency: 2
+      step_frequency: 1.9999999
       step_seq_00: 0
       step_seq_01: 0
       step_seq_02: 0
@@ -903,29 +906,35 @@ MonoBehaviour:
       step_sequencer_sync: 1
       step_sequencer_tempo: 7
       step_smoothing: 0
-      stutter_frequency: 3
+      stutter_frequency: 6
       stutter_on: 0
-      stutter_resample_frequency: 1
+      stutter_resample_frequency: 1.0000002
       stutter_resample_sync: 1
       stutter_resample_tempo: 6
-      stutter_softness: 0
+      stutter_softness: 0.768
       stutter_sync: 1
       stutter_tempo: 8
-      sub_octave: 0
-      sub_shuffle: 0.83545315
-      sub_volume: 0.38531795
-      sub_waveform: 2
-      unison_1_harmonize: 1
-      unison_2_harmonize: 1
+      sub_octave: 1
+      sub_shuffle: 0.676
+      sub_volume: 0
+      sub_waveform: 10
+      unison_1_harmonize: 0
+      unison_2_harmonize: 0
       velocity_track: 0
-      volume: 0.89609784
+      volume: 0.7444974
       modulations:
-      - source: mono_lfo_1
-        destination: osc_feedback_amount
-        amount: 0.6030313
       - source: fil_envelope
-        destination: cross_modulation
-        amount: 0.3599375
+        destination: osc_2_transpose
+        amount: 15.744001
+      - source: mono_lfo_1
+        destination: osc_2_waveform
+        amount: 5.0802345
+      - source: fil_envelope
+        destination: osc_1_transpose
+        amount: 11.5199995
+      - source: fil_envelope
+        destination: cutoff
+        amount: -6.4831023
 --- !u!1 &320130054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,90 +1946,286 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: 9ceecf08513ffe7438a4e88461b319de, type: 3}
+  patchObject: {fileID: 102900000, guid: a7409f4da4cbd4eb69c01f12cb369848, type: 3}
   patchData:
-    license: Patch (c) by Cris Owl Alvarez.  This patch is licensed under a Creative
-      Commons Attribution 4.0 International License.  You should have received a copy
-      of the license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    license: Patch (c) by SF.  This patch is licensed under a Creative Commons Attribution
+      4.0 International License.  You should have received a copy of the license along
+      with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: running toy
-    folder_name: ARP
-    author: Cris Owl Alvarez
+    patch_name: arp_3
+    folder_name: SynthPatches
+    author: SF
     settings:
       amp_attack: 0
-      amp_decay: 0.2959559
-      amp_release: 0.35156253
+      amp_decay: 1.1333563
+      amp_release: 0.6216465
       amp_sustain: 0
       arp_frequency: 2
-      arp_gate: 1
-      arp_octaves: 3
+      arp_gate: 0
+      arp_octaves: 1
       arp_on: 1
-      arp_pattern: 3
+      arp_pattern: 0
       arp_sync: 1
       arp_tempo: 9
       beats_per_minute: 2
-      cross_modulation: 0.366
-      cutoff: 37.214287
-      delay_dry_wet: 0.01444766
-      delay_feedback: 0.095999956
-      delay_frequency: 3.0253909
-      delay_on: 1
-      delay_sync: 0
-      delay_tempo: 8
-      distortion_drive: 30
+      cross_modulation: 0
+      cutoff: 88.31025
+      delay_dry_wet: 0.5
+      delay_feedback: 0.39999998
+      delay_frequency: 2.0000002
+      delay_on: 0
+      delay_sync: 1
+      delay_tempo: 7
+      distortion_drive: 6.4295025
       distortion_mix: 1
       distortion_on: 1
       distortion_type: 0
       fil_attack: 0
-      fil_decay: 3
-      fil_env_depth: 11.264008
-      fil_release: 0
-      fil_sustain: 0
-      filter_blend: 1
-      filter_drive: -5.811
+      fil_decay: 0.53475934
+      fil_env_depth: 5.765518
+      fil_release: 0.5723429
+      fil_sustain: 0.5339504
+      filter_blend: 0
+      filter_drive: 0
       filter_on: 1
       filter_saturation: 0
       filter_shelf: 0
       filter_style: 0
       filter_type: 0
       formant_on: 0
+      formant_x: 0.5479452
+      formant_y: 0.5585586
+      keytrack: 1
+      legato: 0
+      mod_attack: 0
+      mod_decay: 0
+      mod_release: 0
+      mod_sustain: 0
+      mono_lfo_1_amplitude: 0.85915494
+      mono_lfo_1_frequency: 1.9879999
+      mono_lfo_1_retrigger: 0
+      mono_lfo_1_sync: 0
+      mono_lfo_1_tempo: 6
+      mono_lfo_1_waveform: 1
+      mono_lfo_2_amplitude: 1
+      mono_lfo_2_frequency: 1.0000002
+      mono_lfo_2_retrigger: 0
+      mono_lfo_2_sync: 3
+      mono_lfo_2_tempo: 8
+      mono_lfo_2_waveform: 2
+      noise_volume: 0
+      num_steps: 8
+      osc_1_transpose: 0
+      osc_1_tune: 0
+      osc_1_unison_detune: 0
+      osc_1_unison_voices: 1
+      osc_1_volume: 0.031380065
+      osc_1_waveform: 2
+      osc_2_transpose: 0
+      osc_2_tune: 0.032000065
+      osc_2_unison_detune: 6.058597
+      osc_2_unison_voices: 3
+      osc_2_volume: 0.5997912
+      osc_2_waveform: 3
+      osc_feedback_amount: 0
+      osc_feedback_transpose: 0
+      osc_feedback_tune: 0
+      osc_mix: 0
+      pitch_bend_range: 2
+      poly_lfo_amplitude: 1
+      poly_lfo_frequency: 1.0000002
+      poly_lfo_sync: 1
+      poly_lfo_tempo: 6
+      poly_lfo_waveform: 0
+      polyphony: 12
+      portamento: -9
+      portamento_type: 0
+      resonance: 0.10216955
+      reverb_damping: 0.5
+      reverb_dry_wet: 0.5
+      reverb_feedback: 0.9
+      reverb_on: 1
+      step_frequency: 1.9999999
+      step_seq_00: 0.44578314
+      step_seq_01: -0.7108433
+      step_seq_02: 0.12198794
+      step_seq_03: 0.68674695
+      step_seq_04: -0.4698795
+      step_seq_05: 0.42168677
+      step_seq_06: 0.8313253
+      step_seq_07: -0.32530117
+      step_seq_08: 0
+      step_seq_09: 0
+      step_seq_10: 0
+      step_seq_11: 0
+      step_seq_12: 0
+      step_seq_13: 0
+      step_seq_14: 0
+      step_seq_15: 0
+      step_seq_16: 0
+      step_seq_17: 0
+      step_seq_18: 0
+      step_seq_19: 0
+      step_seq_20: 0
+      step_seq_21: 0
+      step_seq_22: 0
+      step_seq_23: 0
+      step_seq_24: 0
+      step_seq_25: 0
+      step_seq_26: 0
+      step_seq_27: 0
+      step_seq_28: 0
+      step_seq_29: 0
+      step_seq_30: 0
+      step_seq_31: 0
+      step_sequencer_retrigger: 0
+      step_sequencer_sync: 1
+      step_sequencer_tempo: 8
+      step_smoothing: 0
+      stutter_frequency: 1.8400002
+      stutter_on: 0
+      stutter_resample_frequency: -7
+      stutter_resample_sync: 1
+      stutter_resample_tempo: 6
+      stutter_softness: 0.568
+      stutter_sync: 1
+      stutter_tempo: 8
+      sub_octave: 0
+      sub_shuffle: 0
+      sub_volume: 0
+      sub_waveform: 1
+      unison_1_harmonize: 0
+      unison_2_harmonize: 0
+      velocity_track: 0.13600004
+      volume: 0.9689591
+      modulations: []
+--- !u!1 &759328268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759328269}
+  - component: {fileID: 759328270}
+  m_Layer: 0
+  m_Name: patch5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &759328269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759328268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 31696414}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &759328270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759328268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patchObject: {fileID: 102900000, guid: 964805030c703469caf28b48777acd9c, type: 3}
+  patchData:
+    license: Patch (c) by Cris Owl Alvarez.  This patch is licensed under a Creative
+      Commons Attribution 4.0 International License.  You should have received a copy
+      of the license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    synth_version: 0.9.0
+    patch_name: Pad_5
+    folder_name: SynthPatches
+    author: Cris Owl Alvarez
+    settings:
+      amp_attack: 0.46484375
+      amp_decay: 1.5
+      amp_release: 2.8226104
+      amp_sustain: 1
+      arp_frequency: 2
+      arp_gate: 0.5
+      arp_octaves: 1
+      arp_on: 0
+      arp_pattern: 0
+      arp_sync: 1
+      arp_tempo: 9
+      beats_per_minute: 2
+      cross_modulation: 0.080000006
+      cutoff: 50.80828
+      delay_dry_wet: 0.5
+      delay_feedback: 0.39999998
+      delay_frequency: 5
+      delay_on: 0
+      delay_sync: 0
+      delay_tempo: 11
+      distortion_drive: 9.404995
+      distortion_mix: 1
+      distortion_on: 0
+      distortion_type: 0
+      fil_attack: 0.1
+      fil_decay: 1.5
+      fil_env_depth: 0
+      fil_release: 1.5
+      fil_sustain: 0.5
+      filter_blend: 0
+      filter_drive: 5.332
+      filter_on: 1
+      filter_saturation: 0
+      filter_shelf: 1
+      filter_style: 2
+      filter_type: 0
+      formant_on: 0
       formant_x: 0.5
       formant_y: 0.5
       keytrack: 1
       legato: 0
-      mod_attack: 0
+      mod_attack: 0.1
       mod_decay: 1.5
       mod_release: 1.5
       mod_sustain: 0.5
-      mono_lfo_1_amplitude: 0.23943663
-      mono_lfo_1_frequency: 1.0000002
+      mono_lfo_1_amplitude: 0.15492952
+      mono_lfo_1_frequency: 6
       mono_lfo_1_retrigger: 0
-      mono_lfo_1_sync: 1
-      mono_lfo_1_tempo: 11
-      mono_lfo_1_waveform: 1
+      mono_lfo_1_sync: 0
+      mono_lfo_1_tempo: 6
+      mono_lfo_1_waveform: 12
       mono_lfo_2_amplitude: 0.15492952
-      mono_lfo_2_frequency: 0.844
+      mono_lfo_2_frequency: -2.8085935
       mono_lfo_2_retrigger: 0
       mono_lfo_2_sync: 0
-      mono_lfo_2_tempo: 7
+      mono_lfo_2_tempo: 8
       mono_lfo_2_waveform: 0
-      noise_volume: 0
+      noise_volume: 0.022593766
       num_steps: 8
-      osc_1_transpose: 12
-      osc_1_tune: 0.38400006
-      osc_1_unison_detune: 11.718751
-      osc_1_unison_voices: 11
-      osc_1_volume: 0.25027394
-      osc_1_waveform: 0
-      osc_2_transpose: 24
-      osc_2_tune: 0.07200003
-      osc_2_unison_detune: 11.718751
-      osc_2_unison_voices: 11
-      osc_2_volume: 0.47543463
+      osc_1_transpose: 0
+      osc_1_tune: 0
+      osc_1_unison_detune: 64.84375
+      osc_1_unison_voices: 1
+      osc_1_volume: 0.68658906
+      osc_1_waveform: 1
+      osc_2_transpose: 0
+      osc_2_tune: 0
+      osc_2_unison_detune: 13.6
+      osc_2_unison_voices: 3
+      osc_2_volume: 0.4082483
       osc_2_waveform: 0
-      osc_feedback_amount: 0.8720001
-      osc_feedback_transpose: 3.999999
-      osc_feedback_tune: 0.64
+      osc_feedback_amount: 0.34703112
+      osc_feedback_transpose: 0
+      osc_feedback_tune: 0.68799996
       osc_mix: 0
       pitch_bend_range: 2
       poly_lfo_amplitude: 1
@@ -2028,13 +2233,13 @@ MonoBehaviour:
       poly_lfo_sync: 1
       poly_lfo_tempo: 7
       poly_lfo_waveform: 0
-      polyphony: 1
+      polyphony: 8
       portamento: -9
       portamento_type: 0
-      resonance: 0.8309859
-      reverb_damping: 0.5
-      reverb_dry_wet: 0.03495597
-      reverb_feedback: 0.86399996
+      resonance: 0.013888889
+      reverb_damping: 0.47384375
+      reverb_dry_wet: 0.56373894
+      reverb_feedback: 0.89926565
       reverb_on: 1
       step_frequency: 1.9999999
       step_seq_00: 0
@@ -2082,51 +2287,23 @@ MonoBehaviour:
       stutter_sync: 1
       stutter_tempo: 8
       sub_octave: 1
-      sub_shuffle: 0.19200003
-      sub_volume: 0.271529
-      sub_waveform: 10
+      sub_shuffle: 0
+      sub_volume: 0.4497199
+      sub_waveform: 0
       unison_1_harmonize: 0
       unison_2_harmonize: 0
-      velocity_track: -0.21600002
-      volume: 0.87658423
+      velocity_track: -0.023999989
+      volume: 1.1725804
       modulations:
+      - source: mono_lfo_1
+        destination: noise_volume
+        amount: 0.056
       - source: mono_lfo_2
-        destination: cutoff
-        amount: 12.451128
-      - source: mono_lfo_1
-        destination: osc_1_volume
-        amount: -0.37848955
-      - source: mono_lfo_1
-        destination: osc_2_volume
-        amount: 0.37848955
---- !u!83 &984913795
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 48000
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
+        destination: osc_1_unison_detune
+        amount: 64.8
+      - source: mono_lfo_2
+        destination: osc_feedback_transpose
+        amount: 19.584
 --- !u!1001 &1069487482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2220,45 +2397,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: e7ad9ae1fda1ad9459e3d3e709c0ff6a, type: 3}
+  patchObject: {fileID: 102900000, guid: 96a844a239f004914bff038d6d708d36, type: 3}
   patchData:
-    license: Patch (c) by Ones & Zeros.  This patch is licensed under a Creative Commons
-      Attribution 4.0 International License.  You should have received a copy of the
-      license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    license: Patch (c) by Cris Owl Alvarez.  This patch is licensed under a Creative
+      Commons Attribution 4.0 International License.  You should have received a copy
+      of the license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: OZ Prarie Arp
-    folder_name: Arp
-    author: Ones & Zeros
+    patch_name: Arp_5
+    folder_name: SynthPatches
+    author: Cris Owl Alvarez
     settings:
-      amp_attack: 0
-      amp_decay: 2.764706
-      amp_release: 1.3529412
-      amp_sustain: 0
+      amp_attack: 0.1
+      amp_decay: 3.5838978
+      amp_release: 1.117647
+      amp_sustain: 0.8382353
       arp_frequency: 2
-      arp_gate: 0.84000003
+      arp_gate: 0.47890624
       arp_octaves: 1
       arp_on: 1
       arp_pattern: 0
-      arp_sync: 1
+      arp_sync: 0
       arp_tempo: 9
       beats_per_minute: 2
-      cross_modulation: 0
-      cutoff: 88.315125
-      delay_dry_wet: 0.5
-      delay_feedback: 0.39999998
-      delay_frequency: 2.0000002
+      cross_modulation: 0.5
+      cutoff: 57.17127
+      delay_dry_wet: 0.32928798
+      delay_feedback: 0.20799994
+      delay_frequency: 1.5466411
       delay_on: 0
-      delay_sync: 1
-      delay_tempo: 7
-      distortion_drive: 4.3199987
+      delay_sync: 0
+      delay_tempo: 11
+      distortion_drive: 3.8812504
       distortion_mix: 1
       distortion_on: 1
       distortion_type: 0
-      fil_attack: 0
-      fil_decay: 0.53475934
-      fil_env_depth: 30.667038
-      fil_release: 1.9411764
-      fil_sustain: 0.3382353
+      fil_attack: 0.23529412
+      fil_decay: 2.0796196
+      fil_env_depth: 46.08
+      fil_release: 1.5
+      fil_sustain: 0.2
       filter_blend: 0
       filter_drive: -12
       filter_on: 1
@@ -2267,67 +2444,67 @@ MonoBehaviour:
       filter_style: 0
       filter_type: 0
       formant_on: 0
-      formant_x: 0.47142857
-      formant_y: 0.5225225
-      keytrack: 0
-      legato: 0
-      mod_attack: 0
-      mod_decay: 0
-      mod_release: 0
-      mod_sustain: 0
+      formant_x: 0.47857141
+      formant_y: 0.4774775
+      keytrack: 0.5680001
+      legato: 1
+      mod_attack: 0.1
+      mod_decay: 1.8607843
+      mod_release: 1.5
+      mod_sustain: 0.47
       mono_lfo_1_amplitude: 0.85915494
-      mono_lfo_1_frequency: 1.9879999
+      mono_lfo_1_frequency: 2.8720002
       mono_lfo_1_retrigger: 0
       mono_lfo_1_sync: 0
-      mono_lfo_1_tempo: 6
-      mono_lfo_1_waveform: 1
-      mono_lfo_2_amplitude: 1
-      mono_lfo_2_frequency: 1.0000002
+      mono_lfo_1_tempo: 10
+      mono_lfo_1_waveform: 0
+      mono_lfo_2_amplitude: 0.887324
+      mono_lfo_2_frequency: 3.86
       mono_lfo_2_retrigger: 0
-      mono_lfo_2_sync: 3
-      mono_lfo_2_tempo: 8
-      mono_lfo_2_waveform: 2
+      mono_lfo_2_sync: 0
+      mono_lfo_2_tempo: 6
+      mono_lfo_2_waveform: 0
       noise_volume: 0
       num_steps: 8
       osc_1_transpose: 0
       osc_1_tune: 0
       osc_1_unison_detune: 0
       osc_1_unison_voices: 1
-      osc_1_volume: 0.63745373
+      osc_1_volume: 0.70526797
       osc_1_waveform: 2
-      osc_2_transpose: 0
-      osc_2_tune: 0.032000065
-      osc_2_unison_detune: 6
+      osc_2_transpose: 12
+      osc_2_tune: 0.10399997
+      osc_2_unison_detune: 0
       osc_2_unison_voices: 1
-      osc_2_volume: 0.8408964
-      osc_2_waveform: 0
-      osc_feedback_amount: 0
+      osc_2_volume: 0.7188308
+      osc_2_waveform: 8
+      osc_feedback_amount: -0.031999946
       osc_feedback_transpose: 0
       osc_feedback_tune: 0
       osc_mix: 0
       pitch_bend_range: 2
-      poly_lfo_amplitude: 1
-      poly_lfo_frequency: 1.0000002
-      poly_lfo_sync: 1
-      poly_lfo_tempo: 6
-      poly_lfo_waveform: 0
-      polyphony: 4
+      poly_lfo_amplitude: 0.97183096
+      poly_lfo_frequency: -5.1280003
+      poly_lfo_sync: 0
+      poly_lfo_tempo: 7
+      poly_lfo_waveform: 4
+      polyphony: 1
       portamento: -9
       portamento_type: 0
-      resonance: 0.40140846
+      resonance: 0.10797614
       reverb_damping: 0.5
-      reverb_dry_wet: 0.5
+      reverb_dry_wet: 0.2403561
       reverb_feedback: 0.9
       reverb_on: 1
       step_frequency: 1.9999999
-      step_seq_00: 0.44578314
-      step_seq_01: -0.7108433
-      step_seq_02: 0.12198794
-      step_seq_03: 0.68674695
-      step_seq_04: -0.4698795
-      step_seq_05: 0.42168677
-      step_seq_06: 0.8313253
-      step_seq_07: -0.32530117
+      step_seq_00: -0.20481932
+      step_seq_01: 0.34939766
+      step_seq_02: 0.1325301
+      step_seq_03: -0.1325301
+      step_seq_04: 0.3012048
+      step_seq_05: 0.51807225
+      step_seq_06: -0.3012048
+      step_seq_07: 0
       step_seq_08: 0
       step_seq_09: 0
       step_seq_10: 0
@@ -2353,29 +2530,60 @@ MonoBehaviour:
       step_seq_30: 0
       step_seq_31: 0
       step_sequencer_retrigger: 0
-      step_sequencer_sync: 1
-      step_sequencer_tempo: 8
+      step_sequencer_sync: 0
+      step_sequencer_tempo: 7
       step_smoothing: 0
-      stutter_frequency: 1.8400002
+      stutter_frequency: 6
       stutter_on: 0
-      stutter_resample_frequency: -7
+      stutter_resample_frequency: 1.0000002
       stutter_resample_sync: 1
       stutter_resample_tempo: 6
-      stutter_softness: 0.568
+      stutter_softness: 0
       stutter_sync: 1
       stutter_tempo: 8
       sub_octave: 0
       sub_shuffle: 0
-      sub_volume: 0.47900784
-      sub_waveform: 1
+      sub_volume: 0.5588425
+      sub_waveform: 3
       unison_1_harmonize: 0
       unison_2_harmonize: 0
-      velocity_track: 0.13600004
-      volume: 0.8612218
+      velocity_track: 0
+      volume: 0.8760981
       modulations:
-      - source: step_sequencer
-        destination: arp_octaves
-        amount: 3
+      - source: mono_lfo_2
+        destination: cutoff
+        amount: 0.010349657
+      - source: mono_lfo_1
+        destination: cutoff
+        amount: 0.0068997717
+--- !u!83 &1109369489
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &1112644443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,20 +2627,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: a182ff521f396b6459ab55cd75c1b3f4, type: 3}
+  patchObject: {fileID: 102900000, guid: e3652d52f24fa4bc38db80208b9e3b48, type: 3}
   patchData:
-    license: Patch (c) by SF.  This patch is licensed under a Creative Commons Attribution
-      4.0 International License.  You should have received a copy of the license along
-      with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    license: Patch (c) by Mikolis.  This patch is licensed under a Creative Commons
+      Attribution 4.0 International License.  You should have received a copy of the
+      license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: SF OSC 2
-    folder_name: Pad
-    author: SF
+    patch_name: Pad_1
+    folder_name: SynthPatches
+    author: Mikolis
     settings:
-      amp_attack: 0.45070425
-      amp_decay: 3.2651277
-      amp_release: 0.7726916
-      amp_sustain: 0.061856806
+      amp_attack: 0.5882353
+      amp_decay: 4
+      amp_release: 0.13258272
+      amp_sustain: 1
       arp_frequency: 2
       arp_gate: 0.5
       arp_octaves: 1
@@ -2440,25 +2648,25 @@ MonoBehaviour:
       arp_pattern: 0
       arp_sync: 1
       arp_tempo: 9
-      beats_per_minute: 1.5833334
-      cross_modulation: 0
-      cutoff: 60.175
-      delay_dry_wet: 0.5
-      delay_feedback: 0.39999998
+      beats_per_minute: 2.3333333
+      cross_modulation: 0.124
+      cutoff: 91.961334
+      delay_dry_wet: 0.05087751
+      delay_feedback: 0.15999997
       delay_frequency: 2.0000002
-      delay_on: 0
+      delay_on: 1
       delay_sync: 1
       delay_tempo: 9
-      distortion_drive: 12
+      distortion_drive: 16.713749
       distortion_mix: 1
       distortion_on: 1
       distortion_type: 0
-      fil_attack: 0
-      fil_decay: 3.9495144
-      fil_env_depth: 30.34404
-      fil_release: 0.4308364
-      fil_sustain: 0
-      filter_blend: 0
+      fil_attack: 0.1
+      fil_decay: 1.5
+      fil_env_depth: 0
+      fil_release: 1.5
+      fil_sustain: 0.5
+      filter_blend: 1
       filter_drive: -12
       filter_on: 1
       filter_saturation: 0
@@ -2466,11 +2674,11 @@ MonoBehaviour:
       filter_style: 0
       filter_type: 0
       formant_on: 0
-      formant_x: 0.4857143
-      formant_y: 0.509434
-      keytrack: 0.9779537
-      legato: 1
-      mod_attack: 0
+      formant_x: 0.5
+      formant_y: 0.5
+      keytrack: 0
+      legato: 0
+      mod_attack: 0.1
       mod_decay: 1.5
       mod_release: 1.5
       mod_sustain: 0.5
@@ -2481,26 +2689,26 @@ MonoBehaviour:
       mono_lfo_1_tempo: 6
       mono_lfo_1_waveform: 0
       mono_lfo_2_amplitude: 1
-      mono_lfo_2_frequency: 3.1177077
+      mono_lfo_2_frequency: 1.0000002
       mono_lfo_2_retrigger: 0
-      mono_lfo_2_sync: 0
-      mono_lfo_2_tempo: 8
+      mono_lfo_2_sync: 1
+      mono_lfo_2_tempo: 7
       mono_lfo_2_waveform: 0
-      noise_volume: 0.1046497
+      noise_volume: 0.08064516
       num_steps: 8
-      osc_1_transpose: 0
+      osc_1_transpose: 12
       osc_1_tune: 0
-      osc_1_unison_detune: 21.96875
+      osc_1_unison_detune: 8
       osc_1_unison_voices: 3
-      osc_1_volume: 0
-      osc_1_waveform: 4
+      osc_1_volume: 0.70710677
+      osc_1_waveform: 3
       osc_2_transpose: 0
       osc_2_tune: 0
-      osc_2_unison_detune: 17.13125
+      osc_2_unison_detune: 0.4
       osc_2_unison_voices: 3
-      osc_2_volume: 0.4424143
-      osc_2_waveform: 0
-      osc_feedback_amount: 0.0019967556
+      osc_2_volume: 0.53603256
+      osc_2_waveform: 3
+      osc_feedback_amount: 0
       osc_feedback_transpose: 0
       osc_feedback_tune: 0
       osc_mix: 0
@@ -2510,13 +2718,13 @@ MonoBehaviour:
       poly_lfo_sync: 1
       poly_lfo_tempo: 7
       poly_lfo_waveform: 0
-      polyphony: 4
-      portamento: -8.52675
-      portamento_type: 1
-      resonance: 0.14179105
-      reverb_damping: 0.13128126
-      reverb_dry_wet: 0.51061594
-      reverb_feedback: 0.9070358
+      polyphony: 16
+      portamento: -9
+      portamento_type: 0
+      resonance: 0.04225352
+      reverb_damping: 0.18
+      reverb_dry_wet: 0.22171772
+      reverb_feedback: 0.96559995
       reverb_on: 1
       step_frequency: 1.9999999
       step_seq_00: 0
@@ -2555,7 +2763,7 @@ MonoBehaviour:
       step_sequencer_sync: 1
       step_sequencer_tempo: 7
       step_smoothing: 0
-      stutter_frequency: 3
+      stutter_frequency: 3.0000002
       stutter_on: 0
       stutter_resample_frequency: 1.0000002
       stutter_resample_sync: 1
@@ -2565,13 +2773,19 @@ MonoBehaviour:
       stutter_tempo: 8
       sub_octave: 0
       sub_shuffle: 0
-      sub_volume: 0
-      sub_waveform: 2
+      sub_volume: 0.20528907
+      sub_waveform: 9
       unison_1_harmonize: 0
       unison_2_harmonize: 0
-      velocity_track: 1
-      volume: 1.1432477
-      modulations: []
+      velocity_track: 0
+      volume: 0.81325865
+      modulations:
+      - source: amp_envelope
+        destination: cutoff
+        amount: -14.172647
+      - source: amp_envelope
+        destination: noise_volume
+        amount: -0.09726358
 --- !u!1 &1186711765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,19 +3066,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: 886d562d9113d764e87e8ea4cd106441, type: 3}
+  patchObject: {fileID: 102900000, guid: c8f111633462e45e48385ca53adfc153, type: 3}
   patchData:
     license: Patch (c) by Cris Owl Alvarez.  This patch is licensed under a Creative
       Commons Attribution 4.0 International License.  You should have received a copy
       of the license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: COA Resonant Pad
-    folder_name: Pad
+    patch_name: Pad_4
+    folder_name: SynthPatches
     author: Cris Owl Alvarez
     settings:
-      amp_attack: 1.4062501
+      amp_attack: 1.351103
       amp_decay: 1.5
-      amp_release: 1.5882353
+      amp_release: 1.1203126
       amp_sustain: 1
       arp_frequency: 2
       arp_gate: 0.5
@@ -2874,15 +3088,15 @@ MonoBehaviour:
       arp_sync: 1
       arp_tempo: 9
       beats_per_minute: 2
-      cross_modulation: 0.036
-      cutoff: 55.4455
-      delay_dry_wet: 0.053447176
-      delay_feedback: 0.34399986
-      delay_frequency: 3.1542969
-      delay_on: 1
+      cross_modulation: 0.042
+      cutoff: 100.156
+      delay_dry_wet: 0.5
+      delay_feedback: 0.39999998
+      delay_frequency: 5
+      delay_on: 0
       delay_sync: 0
-      delay_tempo: 9
-      distortion_drive: -8.356875
+      delay_tempo: 11
+      distortion_drive: 0
       distortion_mix: 1
       distortion_on: 1
       distortion_type: 0
@@ -2891,51 +3105,51 @@ MonoBehaviour:
       fil_env_depth: 0
       fil_release: 1.5
       fil_sustain: 0.5
-      filter_blend: 2
-      filter_drive: 2.8255
-      filter_on: 1
+      filter_blend: 0
+      filter_drive: 0
+      filter_on: 0
       filter_saturation: 0
       filter_shelf: 0
       filter_style: 0
       filter_type: 0
-      formant_on: 1
-      formant_x: 0.65
-      formant_y: 0.6306306
-      keytrack: 0.016000032
-      legato: 1
-      mod_attack: 0
+      formant_on: 0
+      formant_x: 0.5
+      formant_y: 0.5
+      keytrack: 0.31200004
+      legato: 0
+      mod_attack: 0.1
       mod_decay: 1.5
       mod_release: 1.5
       mod_sustain: 0.5
-      mono_lfo_1_amplitude: 0.46478868
-      mono_lfo_1_frequency: -0.9042966
+      mono_lfo_1_amplitude: 0.15492952
+      mono_lfo_1_frequency: 6
       mono_lfo_1_retrigger: 0
       mono_lfo_1_sync: 0
-      mono_lfo_1_tempo: 11
+      mono_lfo_1_tempo: 6
       mono_lfo_1_waveform: 12
-      mono_lfo_2_amplitude: 0.098591566
-      mono_lfo_2_frequency: 1.0000002
+      mono_lfo_2_amplitude: 1
+      mono_lfo_2_frequency: 1.3808596
       mono_lfo_2_retrigger: 0
       mono_lfo_2_sync: 1
-      mono_lfo_2_tempo: 7
-      mono_lfo_2_waveform: 12
-      noise_volume: 0.03470312
+      mono_lfo_2_tempo: 8
+      mono_lfo_2_waveform: 0
+      noise_volume: 0
       num_steps: 8
-      osc_1_transpose: -12
-      osc_1_tune: -0.10399997
-      osc_1_unison_detune: 6
-      osc_1_unison_voices: 11
-      osc_1_volume: 0.51042515
-      osc_1_waveform: 0
-      osc_2_transpose: 0
-      osc_2_tune: 0.06400001
-      osc_2_unison_detune: 6.7999997
-      osc_2_unison_voices: 7
-      osc_2_volume: 0.18564993
+      osc_1_transpose: 0
+      osc_1_tune: 0
+      osc_1_unison_detune: 64.84375
+      osc_1_unison_voices: 1
+      osc_1_volume: 0.3163262
+      osc_1_waveform: 1
+      osc_2_transpose: -12
+      osc_2_tune: 0
+      osc_2_unison_detune: 13.6
+      osc_2_unison_voices: 1
+      osc_2_volume: 0.77913064
       osc_2_waveform: 0
-      osc_feedback_amount: -0.21600002
+      osc_feedback_amount: 0.45346874
       osc_feedback_transpose: 0
-      osc_feedback_tune: -0.80799997
+      osc_feedback_tune: 0.68799996
       osc_mix: 0
       pitch_bend_range: 2
       poly_lfo_amplitude: 1
@@ -2943,13 +3157,13 @@ MonoBehaviour:
       poly_lfo_sync: 1
       poly_lfo_tempo: 7
       poly_lfo_waveform: 0
-      polyphony: 4
-      portamento: -5.6400003
-      portamento_type: 1
-      resonance: 0.22916667
-      reverb_damping: 0.5
-      reverb_dry_wet: 0.4920005
-      reverb_feedback: 0.956
+      polyphony: 8
+      portamento: -9
+      portamento_type: 0
+      resonance: 0.048611112
+      reverb_damping: 0.47384375
+      reverb_dry_wet: 0.56373894
+      reverb_feedback: 0.89926565
       reverb_on: 1
       step_frequency: 1.9999999
       step_seq_00: 0
@@ -2993,223 +3207,24 @@ MonoBehaviour:
       stutter_resample_frequency: 1.0000002
       stutter_resample_sync: 1
       stutter_resample_tempo: 6
-      stutter_softness: 1
+      stutter_softness: 0
       stutter_sync: 1
       stutter_tempo: 8
       sub_octave: 1
-      sub_shuffle: 0.452
-      sub_volume: 0.24607316
-      sub_waveform: 0
-      unison_1_harmonize: 0
-      unison_2_harmonize: 1
-      velocity_track: -0.047999978
-      volume: 1.0215589
-      modulations:
-      - source: mono_lfo_1
-        destination: osc_feedback_amount
-        amount: 0.512
-      - source: mono_lfo_2
-        destination: delay_frequency
-        amount: 4.004
---- !u!1 &1366107815
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1366107816}
-  - component: {fileID: 1366107817}
-  m_Layer: 0
-  m_Name: patch1 (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1366107816
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366107815}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 138308068}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1366107817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366107815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: 6adae2794f6ce3146a15542b2f69ab00, type: 3}
-  patchData:
-    license: Patch (c) by SF.  This patch is licensed under a Creative Commons Attribution
-      4.0 International License.  You should have received a copy of the license along
-      with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
-    synth_version: 0.9.0
-    patch_name: SF Arp 2
-    folder_name: Arp
-    author: SF
-    settings:
-      amp_attack: 0
-      amp_decay: 1.1333563
-      amp_release: 0.6216465
-      amp_sustain: 0
-      arp_frequency: 2
-      arp_gate: 0
-      arp_octaves: 1
-      arp_on: 1
-      arp_pattern: 0
-      arp_sync: 1
-      arp_tempo: 9
-      beats_per_minute: 2
-      cross_modulation: 0
-      cutoff: 90.05546
-      delay_dry_wet: 0.5
-      delay_feedback: 0.39999998
-      delay_frequency: 2.0000002
-      delay_on: 0
-      delay_sync: 1
-      delay_tempo: 7
-      distortion_drive: 10.2969265
-      distortion_mix: 1
-      distortion_on: 1
-      distortion_type: 0
-      fil_attack: 0
-      fil_decay: 0.30037004
-      fil_env_depth: 12.065903
-      fil_release: 0.5723429
-      fil_sustain: 0.5339504
-      filter_blend: 0
-      filter_drive: -12
-      filter_on: 1
-      filter_saturation: 0
-      filter_shelf: 0
-      filter_style: 0
-      filter_type: 0
-      formant_on: 0
-      formant_x: 0.47142857
-      formant_y: 0.5225225
-      keytrack: 1
-      legato: 0
-      mod_attack: 0
-      mod_decay: 0
-      mod_release: 0
-      mod_sustain: 0
-      mono_lfo_1_amplitude: 0.85915494
-      mono_lfo_1_frequency: 1.9879999
-      mono_lfo_1_retrigger: 0
-      mono_lfo_1_sync: 0
-      mono_lfo_1_tempo: 6
-      mono_lfo_1_waveform: 1
-      mono_lfo_2_amplitude: 1
-      mono_lfo_2_frequency: 1.0000002
-      mono_lfo_2_retrigger: 0
-      mono_lfo_2_sync: 3
-      mono_lfo_2_tempo: 8
-      mono_lfo_2_waveform: 2
-      noise_volume: 0
-      num_steps: 8
-      osc_1_transpose: 0
-      osc_1_tune: 0
-      osc_1_unison_detune: 0
-      osc_1_unison_voices: 1
-      osc_1_volume: 0.03236555
-      osc_1_waveform: 2
-      osc_2_transpose: 0
-      osc_2_tune: 0.032000065
-      osc_2_unison_detune: 6.058597
-      osc_2_unison_voices: 3
-      osc_2_volume: 0.5997912
-      osc_2_waveform: 3
-      osc_feedback_amount: -0.36681926
-      osc_feedback_transpose: 12
-      osc_feedback_tune: 0
-      osc_mix: 0
-      pitch_bend_range: 2
-      poly_lfo_amplitude: 1
-      poly_lfo_frequency: 1.0000002
-      poly_lfo_sync: 1
-      poly_lfo_tempo: 6
-      poly_lfo_waveform: 0
-      polyphony: 4
-      portamento: -9
-      portamento_type: 0
-      resonance: 0.478171
-      reverb_damping: 0.5
-      reverb_dry_wet: 0.5
-      reverb_feedback: 0.9
-      reverb_on: 1
-      step_frequency: 1.9999999
-      step_seq_00: 0.44578314
-      step_seq_01: -0.7108433
-      step_seq_02: 0.12198794
-      step_seq_03: 0.68674695
-      step_seq_04: -0.4698795
-      step_seq_05: 0.42168677
-      step_seq_06: 0.8313253
-      step_seq_07: -0.32530117
-      step_seq_08: 0
-      step_seq_09: 0
-      step_seq_10: 0
-      step_seq_11: 0
-      step_seq_12: 0
-      step_seq_13: 0
-      step_seq_14: 0
-      step_seq_15: 0
-      step_seq_16: 0
-      step_seq_17: 0
-      step_seq_18: 0
-      step_seq_19: 0
-      step_seq_20: 0
-      step_seq_21: 0
-      step_seq_22: 0
-      step_seq_23: 0
-      step_seq_24: 0
-      step_seq_25: 0
-      step_seq_26: 0
-      step_seq_27: 0
-      step_seq_28: 0
-      step_seq_29: 0
-      step_seq_30: 0
-      step_seq_31: 0
-      step_sequencer_retrigger: 0
-      step_sequencer_sync: 1
-      step_sequencer_tempo: 8
-      step_smoothing: 0
-      stutter_frequency: 1.8400002
-      stutter_on: 0
-      stutter_resample_frequency: -7
-      stutter_resample_sync: 1
-      stutter_resample_tempo: 6
-      stutter_softness: 0.568
-      stutter_sync: 1
-      stutter_tempo: 8
-      sub_octave: 0
       sub_shuffle: 0
       sub_volume: 0
-      sub_waveform: 1
+      sub_waveform: 0
       unison_1_harmonize: 0
       unison_2_harmonize: 0
-      velocity_track: 0.13600004
-      volume: 0.97760475
+      velocity_track: 0
+      volume: 0.9903248
       modulations:
-      - source: step_sequencer
-        destination: osc_feedback_amount
-        amount: -0.48309377
+      - source: mono_lfo_2
+        destination: osc_1_unison_detune
+        amount: 64.8
+      - source: mono_lfo_1
+        destination: noise_volume
+        amount: 0.056
 --- !u!1 &1379984405
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,7 +3577,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1506436977
+--- !u!1 &1658775875
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3570,81 +3585,81 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1506436978}
-  - component: {fileID: 1506436979}
+  - component: {fileID: 1658775876}
+  - component: {fileID: 1658775877}
   m_Layer: 0
-  m_Name: patch1 (5)
+  m_Name: patch6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1506436978
+--- !u!4 &1658775876
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506436977}
+  m_GameObject: {fileID: 1658775875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 138308068}
+  m_Father: {fileID: 31696414}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1506436979
+--- !u!114 &1658775877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506436977}
+  m_GameObject: {fileID: 1658775875}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: e13d2d48f8b639440b9ec7d075636790, type: 3}
+  patchObject: {fileID: 102900000, guid: 7f9f78c8740194a578376d318f9bf637, type: 3}
   patchData:
-    license: Patch (c) by SF.  This patch is licensed under a Creative Commons Attribution
-      4.0 International License.  You should have received a copy of the license along
-      with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    license: Patch (c) by Cris Owl Alvarez.  This patch is licensed under a Creative
+      Commons Attribution 4.0 International License.  You should have received a copy
+      of the license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: SF Arp 1
-    folder_name: Arp
-    author: SF
+    patch_name: Pad_6
+    folder_name: SynthPatches
+    author: Cris Owl Alvarez
     settings:
-      amp_attack: 0
-      amp_decay: 1.1333563
-      amp_release: 0.6216465
-      amp_sustain: 0
+      amp_attack: 0.3984375
+      amp_decay: 1.5
+      amp_release: 2.8945312
+      amp_sustain: 0.77900964
       arp_frequency: 2
-      arp_gate: 0
+      arp_gate: 1
       arp_octaves: 1
-      arp_on: 1
+      arp_on: 0
       arp_pattern: 0
       arp_sync: 1
       arp_tempo: 9
       beats_per_minute: 2
-      cross_modulation: 0
-      cutoff: 69.46142
+      cross_modulation: 0.218
+      cutoff: 48.18412
       delay_dry_wet: 0.5
       delay_feedback: 0.39999998
       delay_frequency: 2.0000002
       delay_on: 0
       delay_sync: 1
-      delay_tempo: 7
-      distortion_drive: 6.4295025
+      delay_tempo: 9
+      distortion_drive: 0
       distortion_mix: 1
       distortion_on: 1
       distortion_type: 0
-      fil_attack: 0
-      fil_decay: 0.53475934
-      fil_env_depth: 5.765518
-      fil_release: 0.5723429
-      fil_sustain: 0.5339504
-      filter_blend: 0
+      fil_attack: 0.1
+      fil_decay: 1.5
+      fil_env_depth: 0
+      fil_release: 1.5
+      fil_sustain: 0.5
+      filter_blend: 2
       filter_drive: 0
       filter_on: 1
       filter_saturation: 0
@@ -3652,41 +3667,41 @@ MonoBehaviour:
       filter_style: 0
       filter_type: 0
       formant_on: 0
-      formant_x: 0.47142857
-      formant_y: 0.5225225
+      formant_x: 0.5
+      formant_y: 0.5
       keytrack: 1
       legato: 0
       mod_attack: 0
-      mod_decay: 0
-      mod_release: 0
-      mod_sustain: 0
-      mono_lfo_1_amplitude: 0.85915494
-      mono_lfo_1_frequency: 1.9879999
+      mod_decay: 1.5
+      mod_release: 1.5
+      mod_sustain: 0.5
+      mono_lfo_1_amplitude: 0.40845072
+      mono_lfo_1_frequency: 1.0000002
       mono_lfo_1_retrigger: 0
-      mono_lfo_1_sync: 0
+      mono_lfo_1_sync: 1
       mono_lfo_1_tempo: 6
-      mono_lfo_1_waveform: 1
-      mono_lfo_2_amplitude: 1
+      mono_lfo_1_waveform: 0
+      mono_lfo_2_amplitude: 0.5774648
       mono_lfo_2_frequency: 1.0000002
       mono_lfo_2_retrigger: 0
-      mono_lfo_2_sync: 3
-      mono_lfo_2_tempo: 8
-      mono_lfo_2_waveform: 2
+      mono_lfo_2_sync: 1
+      mono_lfo_2_tempo: 6
+      mono_lfo_2_waveform: 1
       noise_volume: 0
       num_steps: 8
-      osc_1_transpose: 0
+      osc_1_transpose: -12
       osc_1_tune: 0
       osc_1_unison_detune: 0
-      osc_1_unison_voices: 1
-      osc_1_volume: 0.031380065
-      osc_1_waveform: 2
+      osc_1_unison_voices: 3
+      osc_1_volume: 0
+      osc_1_waveform: 0
       osc_2_transpose: 0
-      osc_2_tune: 0.032000065
-      osc_2_unison_detune: 6.058597
-      osc_2_unison_voices: 3
-      osc_2_volume: 0.5997912
-      osc_2_waveform: 3
-      osc_feedback_amount: 0
+      osc_2_tune: 0.016000032
+      osc_2_unison_detune: 0
+      osc_2_unison_voices: 1
+      osc_2_volume: 0.8408964
+      osc_2_waveform: 0
+      osc_feedback_amount: -0.1734063
       osc_feedback_transpose: 0
       osc_feedback_tune: 0
       osc_mix: 0
@@ -3694,25 +3709,25 @@ MonoBehaviour:
       poly_lfo_amplitude: 1
       poly_lfo_frequency: 1.0000002
       poly_lfo_sync: 1
-      poly_lfo_tempo: 6
+      poly_lfo_tempo: 7
       poly_lfo_waveform: 0
-      polyphony: 4
+      polyphony: 7
       portamento: -9
       portamento_type: 0
-      resonance: 0.4207456
+      resonance: 0
       reverb_damping: 0.5
-      reverb_dry_wet: 0.5
+      reverb_dry_wet: 0.7269289
       reverb_feedback: 0.9
       reverb_on: 1
       step_frequency: 1.9999999
-      step_seq_00: 0.44578314
-      step_seq_01: -0.7108433
-      step_seq_02: 0.12198794
-      step_seq_03: 0.68674695
-      step_seq_04: -0.4698795
-      step_seq_05: 0.42168677
-      step_seq_06: 0.8313253
-      step_seq_07: -0.32530117
+      step_seq_00: 0
+      step_seq_01: 0
+      step_seq_02: 0
+      step_seq_03: 0
+      step_seq_04: 0
+      step_seq_05: 0
+      step_seq_06: 0
+      step_seq_07: 0
       step_seq_08: 0
       step_seq_09: 0
       step_seq_10: 0
@@ -3739,25 +3754,31 @@ MonoBehaviour:
       step_seq_31: 0
       step_sequencer_retrigger: 0
       step_sequencer_sync: 1
-      step_sequencer_tempo: 8
+      step_sequencer_tempo: 7
       step_smoothing: 0
-      stutter_frequency: 1.8400002
+      stutter_frequency: 3.0000002
       stutter_on: 0
-      stutter_resample_frequency: -7
+      stutter_resample_frequency: 1.0000002
       stutter_resample_sync: 1
       stutter_resample_tempo: 6
-      stutter_softness: 0.568
+      stutter_softness: 0
       stutter_sync: 1
       stutter_tempo: 8
-      sub_octave: 0
-      sub_shuffle: 0
-      sub_volume: 0
-      sub_waveform: 1
+      sub_octave: 1
+      sub_shuffle: 0.464
+      sub_volume: 0.21219759
+      sub_waveform: 0
       unison_1_harmonize: 0
       unison_2_harmonize: 0
-      velocity_track: 0.13600004
-      volume: 0.9689591
-      modulations: []
+      velocity_track: 0.047999978
+      volume: 0.9802015
+      modulations:
+      - source: mono_lfo_1
+        destination: osc_2_tune
+        amount: 0.328
+      - source: mono_lfo_2
+        destination: cross_modulation
+        amount: 0.11
 --- !u!1 &1691384918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3849,6 +3870,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!83 &1779942374
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: helm
+  m_LoadType: 0
+  m_Channels: 1
+  m_Frequency: 48000
+  m_BitsPerSample: 32
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &1782656676
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,19 +3941,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: 1b41f7c2c2b80bd4290f28e73d0cf862, type: 3}
+  patchObject: {fileID: 102900000, guid: 655930afcdef14c458806cb663ae03a5, type: 3}
   patchData:
-    license: Patch (c) by SF.  This patch is licensed under a Creative Commons Attribution
-      4.0 International License.  You should have received a copy of the license along
-      with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+    license: Patch (c) by Cris Owl Alvarez.  This patch is licensed under a Creative
+      Commons Attribution 4.0 International License.  You should have received a copy
+      of the license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: SF Soft Pulse 1
-    folder_name: Pad
-    author: SF
+    patch_name: Pad_2
+    folder_name: SynthPatches
+    author: Cris Owl Alvarez
     settings:
-      amp_attack: 0
-      amp_decay: 1.2071896
-      amp_release: 1.5532095
+      amp_attack: 0.87362134
+      amp_decay: 1.5
+      amp_release: 1.2941177
       amp_sustain: 1
       arp_frequency: 2
       arp_gate: 0.5
@@ -3914,35 +3963,35 @@ MonoBehaviour:
       arp_sync: 1
       arp_tempo: 9
       beats_per_minute: 2
-      cross_modulation: 0.1935
-      cutoff: 60.175
-      delay_dry_wet: 0.5
-      delay_feedback: 0.39999998
+      cross_modulation: 0.29999998
+      cutoff: 79.36535
+      delay_dry_wet: 0.34
+      delay_feedback: 0.15199995
       delay_frequency: 2.0000002
       delay_on: 0
       delay_sync: 1
       delay_tempo: 9
-      distortion_drive: 18.649454
+      distortion_drive: 9.599998
       distortion_mix: 1
       distortion_on: 1
       distortion_type: 0
-      fil_attack: 0
-      fil_decay: 2.8713236
-      fil_env_depth: 1.4722748
-      fil_release: 0.11534026
-      fil_sustain: 0
+      fil_attack: 0.1
+      fil_decay: 1.5
+      fil_env_depth: 4.095993
+      fil_release: 1.5
+      fil_sustain: 0.5
       filter_blend: 0
       filter_drive: -12
       filter_on: 1
       filter_saturation: 0
-      filter_shelf: 0
-      filter_style: 0
+      filter_shelf: 1
+      filter_style: 2
       filter_type: 0
       formant_on: 0
-      formant_x: 0.4857143
-      formant_y: 0.509434
-      keytrack: 0.011097789
-      legato: 1
+      formant_x: 0.5
+      formant_y: 0.5
+      keytrack: 0
+      legato: 0
       mod_attack: 0
       mod_decay: 1.5
       mod_release: 1.5
@@ -3954,28 +4003,28 @@ MonoBehaviour:
       mono_lfo_1_tempo: 6
       mono_lfo_1_waveform: 0
       mono_lfo_2_amplitude: 1
-      mono_lfo_2_frequency: 3.1177077
+      mono_lfo_2_frequency: 1.0000002
       mono_lfo_2_retrigger: 0
-      mono_lfo_2_sync: 0
-      mono_lfo_2_tempo: 8
+      mono_lfo_2_sync: 1
+      mono_lfo_2_tempo: 7
       mono_lfo_2_waveform: 0
-      noise_volume: 0.046291888
+      noise_volume: 0
       num_steps: 8
-      osc_1_transpose: 0
+      osc_1_transpose: -12
       osc_1_tune: 0
-      osc_1_unison_detune: 21.96875
-      osc_1_unison_voices: 3
-      osc_1_volume: 0.5413685
-      osc_1_waveform: 3
+      osc_1_unison_detune: 0
+      osc_1_unison_voices: 15
+      osc_1_volume: 0.35355338
+      osc_1_waveform: 0
       osc_2_transpose: 0
       osc_2_tune: 0
-      osc_2_unison_detune: 17.13125
-      osc_2_unison_voices: 3
-      osc_2_volume: 0.025574202
-      osc_2_waveform: 3
-      osc_feedback_amount: 0.0019967556
+      osc_2_unison_detune: 0
+      osc_2_unison_voices: 13
+      osc_2_volume: 0.36555523
+      osc_2_waveform: 5
+      osc_feedback_amount: -0.41599995
       osc_feedback_transpose: 0
-      osc_feedback_tune: 0
+      osc_feedback_tune: 0.37600005
       osc_mix: 0
       pitch_bend_range: 2
       poly_lfo_amplitude: 1
@@ -3983,13 +4032,13 @@ MonoBehaviour:
       poly_lfo_sync: 1
       poly_lfo_tempo: 7
       poly_lfo_waveform: 0
-      polyphony: 4
-      portamento: -8.52675
-      portamento_type: 1
-      resonance: 0.14179105
-      reverb_damping: 0.13128126
-      reverb_dry_wet: 0.7609597
-      reverb_feedback: 0.8576969
+      polyphony: 16
+      portamento: -9
+      portamento_type: 0
+      resonance: 0.5
+      reverb_damping: 0.5
+      reverb_dry_wet: 0.5
+      reverb_feedback: 0.9184
       reverb_on: 1
       step_frequency: 1.9999999
       step_seq_00: 0
@@ -4028,26 +4077,23 @@ MonoBehaviour:
       step_sequencer_sync: 1
       step_sequencer_tempo: 7
       step_smoothing: 0
-      stutter_frequency: 3
-      stutter_on: 0
-      stutter_resample_frequency: 1.0000002
-      stutter_resample_sync: 1
+      stutter_frequency: 2.152
+      stutter_on: 1
+      stutter_resample_frequency: 2.6280003
+      stutter_resample_sync: 0
       stutter_resample_tempo: 6
       stutter_softness: 0
-      stutter_sync: 1
+      stutter_sync: 0
       stutter_tempo: 8
-      sub_octave: 0
+      sub_octave: 1
       sub_shuffle: 0
-      sub_volume: 0
-      sub_waveform: 2
+      sub_volume: 0.50628847
+      sub_waveform: 10
       unison_1_harmonize: 0
       unison_2_harmonize: 0
       velocity_track: 0
-      volume: 0.96691424
-      modulations:
-      - source: mono_lfo_2
-        destination: osc_1_volume
-        amount: -0.21776496
+      volume: 0.94742423
+      modulations: []
 --- !u!1 &1861108593
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,14 +4137,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: 7223d16bb6da85f44b301b2af81ec385, type: 3}
+  patchObject: {fileID: 102900000, guid: f7b63908c443d46a98b029becad60820, type: 3}
   patchData:
     license: Patch (c) by Mikolis.  This patch is licensed under a Creative Commons
       Attribution 4.0 International License.  You should have received a copy of the
       license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: CM Kleer Arp
-    folder_name: Arp
+    patch_name: Arp_1
+    folder_name: SynthPatches
     author: Mikolis
     settings:
       amp_attack: 0
@@ -4114,7 +4160,7 @@ MonoBehaviour:
       arp_tempo: 9
       beats_per_minute: 2.3333333
       cross_modulation: 0
-      cutoff: 93.722694
+      cutoff: 78.99163
       delay_dry_wet: 0.01825558
       delay_feedback: 0.39999998
       delay_frequency: 2.0000002
@@ -4138,8 +4184,8 @@ MonoBehaviour:
       filter_style: 2
       filter_type: 0
       formant_on: 0
-      formant_x: 0.5
-      formant_y: 0.5
+      formant_x: 0.5068493
+      formant_y: 0.5135135
       keytrack: 0
       legato: 0
       mod_attack: 0.1
@@ -4186,8 +4232,8 @@ MonoBehaviour:
       portamento: -9
       portamento_type: 0
       resonance: 0
-      reverb_damping: 0.16
-      reverb_dry_wet: 0.1313673
+      reverb_damping: 0.13017188
+      reverb_dry_wet: 0.15828916
       reverb_feedback: 0.9496
       reverb_on: 1
       step_frequency: 1.9999999
@@ -4360,7 +4406,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243472660568356628, guid: cdd5f07ccae0947c6b745e9feb430f28,
     type: 2}
-  m_audioClip: {fileID: 2028436185}
+  m_audioClip: {fileID: 1109369489}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4500,8 +4546,8 @@ MonoBehaviour:
   - {fileID: 727755625}
   - {fileID: 293054544}
   - {fileID: 1086388059}
-  - {fileID: 1506436979}
-  - {fileID: 1366107817}
+  - {fileID: 0}
+  - {fileID: 0}
   patchIndex: 0
   leftController: 1
 --- !u!114 &1948717428
@@ -4549,34 +4595,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1069487482}
   m_PrefabAsset: {fileID: 0}
---- !u!83 &2028436185
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: helm
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 48000
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!1 &2040976678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4620,88 +4638,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f3b6e6a951d4582bfd784c7c9b4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchObject: {fileID: 102900000, guid: 78cdbba8f40298b4289a616787ee9a9d, type: 3}
+  patchObject: {fileID: 102900000, guid: d8c231140f0a643fca0aa072071ebca3, type: 3}
   patchData:
-    license: Patch (c) by Mikolis.  This patch is licensed under a Creative Commons
+    license: Patch (c) by Ones & Zeros.  This patch is licensed under a Creative Commons
       Attribution 4.0 International License.  You should have received a copy of the
       license along with this work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
     synth_version: 0.9.0
-    patch_name: CM Tremolo
-    folder_name: Arp
-    author: Mikolis
+    patch_name: Arp_2
+    folder_name: SynthPatches
+    author: Ones & Zeros
     settings:
-      amp_attack: 0.1
-      amp_decay: 1.5
-      amp_release: 0.3
-      amp_sustain: 1
+      amp_attack: 0
+      amp_decay: 2.764706
+      amp_release: 1.3529412
+      amp_sustain: 0
       arp_frequency: 2
-      arp_gate: 0.092
+      arp_gate: 0.84000003
       arp_octaves: 1
       arp_on: 1
       arp_pattern: 0
       arp_sync: 1
       arp_tempo: 9
-      beats_per_minute: 2.3333333
-      cross_modulation: 0.148
-      cutoff: 80
-      delay_dry_wet: 0.0035067634
-      delay_feedback: 0.27199996
+      beats_per_minute: 2
+      cross_modulation: 0
+      cutoff: 98.24795
+      delay_dry_wet: 0.5
+      delay_feedback: 0.39999998
       delay_frequency: 2.0000002
-      delay_on: 1
-      delay_sync: 2
-      delay_tempo: 8
-      distortion_drive: 12
+      delay_on: 0
+      delay_sync: 1
+      delay_tempo: 7
+      distortion_drive: 4.3199987
       distortion_mix: 1
       distortion_on: 1
       distortion_type: 0
-      fil_attack: 0.1
-      fil_decay: 1.5
-      fil_env_depth: 0
-      fil_release: 1.5
-      fil_sustain: 0.5
+      fil_attack: 0
+      fil_decay: 0.53475934
+      fil_env_depth: 30.667038
+      fil_release: 1.9411764
+      fil_sustain: 0.3382353
       filter_blend: 0
       filter_drive: -12
       filter_on: 1
       filter_saturation: 0
-      filter_shelf: 2
-      filter_style: 2
+      filter_shelf: 0
+      filter_style: 0
       filter_type: 0
       formant_on: 0
-      formant_x: 0.5
-      formant_y: 0.5
+      formant_x: 0.47142857
+      formant_y: 0.5225225
       keytrack: 0
       legato: 0
-      mod_attack: 0.1
-      mod_decay: 1.5
-      mod_release: 1.5
-      mod_sustain: 0.5
-      mono_lfo_1_amplitude: 1
-      mono_lfo_1_frequency: 1.0000002
+      mod_attack: 0
+      mod_decay: 0
+      mod_release: 0
+      mod_sustain: 0
+      mono_lfo_1_amplitude: 0.85915494
+      mono_lfo_1_frequency: 1.9879999
       mono_lfo_1_retrigger: 0
-      mono_lfo_1_sync: 1
+      mono_lfo_1_sync: 0
       mono_lfo_1_tempo: 6
-      mono_lfo_1_waveform: 0
-      mono_lfo_2_amplitude: 0.18309855
+      mono_lfo_1_waveform: 1
+      mono_lfo_2_amplitude: 1
       mono_lfo_2_frequency: 1.0000002
       mono_lfo_2_retrigger: 0
-      mono_lfo_2_sync: 1
-      mono_lfo_2_tempo: 9
-      mono_lfo_2_waveform: 3
+      mono_lfo_2_sync: 3
+      mono_lfo_2_tempo: 8
+      mono_lfo_2_waveform: 2
       noise_volume: 0
       num_steps: 8
-      osc_1_transpose: 24
+      osc_1_transpose: 0
       osc_1_tune: 0
-      osc_1_unison_detune: 4
-      osc_1_unison_voices: 5
-      osc_1_volume: 0.6389431
-      osc_1_waveform: 3
-      osc_2_transpose: 12
-      osc_2_tune: 0
-      osc_2_unison_detune: 24.8
-      osc_2_unison_voices: 13
-      osc_2_volume: 0.34186935
+      osc_1_unison_detune: 0
+      osc_1_unison_voices: 1
+      osc_1_volume: 0.63745373
+      osc_1_waveform: 2
+      osc_2_transpose: 0
+      osc_2_tune: 0.032000065
+      osc_2_unison_detune: 6
+      osc_2_unison_voices: 1
+      osc_2_volume: 0.8408964
       osc_2_waveform: 0
-      osc_feedback_amount: 0
+      osc_feedback_amount: -0.249375
       osc_feedback_transpose: 0
       osc_feedback_tune: 0
       osc_mix: 0
@@ -4709,25 +4727,25 @@ MonoBehaviour:
       poly_lfo_amplitude: 1
       poly_lfo_frequency: 1.0000002
       poly_lfo_sync: 1
-      poly_lfo_tempo: 7
+      poly_lfo_tempo: 6
       poly_lfo_waveform: 0
-      polyphony: 1
+      polyphony: 12
       portamento: -9
       portamento_type: 0
-      resonance: 0.6126761
-      reverb_damping: 0.148
-      reverb_dry_wet: 0.15517242
-      reverb_feedback: 0.9464
+      resonance: 0.049171243
+      reverb_damping: 0.5
+      reverb_dry_wet: 0.5
+      reverb_feedback: 0.9
       reverb_on: 1
       step_frequency: 1.9999999
-      step_seq_00: 0
-      step_seq_01: 0
-      step_seq_02: 0
-      step_seq_03: 0
-      step_seq_04: 0
-      step_seq_05: 0
-      step_seq_06: 0
-      step_seq_07: 0
+      step_seq_00: 0.44578314
+      step_seq_01: -0.7108433
+      step_seq_02: 0.12198794
+      step_seq_03: 0.68674695
+      step_seq_04: -0.4698795
+      step_seq_05: 0.42168677
+      step_seq_06: 0.8313253
+      step_seq_07: -0.32530117
       step_seq_08: 0
       step_seq_09: 0
       step_seq_10: 0
@@ -4754,34 +4772,25 @@ MonoBehaviour:
       step_seq_31: 0
       step_sequencer_retrigger: 0
       step_sequencer_sync: 1
-      step_sequencer_tempo: 7
+      step_sequencer_tempo: 8
       step_smoothing: 0
-      stutter_frequency: 3.0000002
+      stutter_frequency: 1.8400002
       stutter_on: 0
-      stutter_resample_frequency: 1.0000002
+      stutter_resample_frequency: -7
       stutter_resample_sync: 1
       stutter_resample_tempo: 6
-      stutter_softness: 0
+      stutter_softness: 0.568
       stutter_sync: 1
       stutter_tempo: 8
       sub_octave: 0
       sub_shuffle: 0
-      sub_volume: 0.07983463
-      sub_waveform: 2
+      sub_volume: 0.47900784
+      sub_waveform: 1
       unison_1_harmonize: 0
       unison_2_harmonize: 0
-      velocity_track: 0
-      volume: 0.8297099
+      velocity_track: 0.13600004
+      volume: 0.8612218
       modulations:
-      - source: mono_lfo_1
-        destination: osc_2_volume
-        amount: -0.14712733
-      - source: mono_lfo_2
-        destination: resonance
-        amount: -1
-      - source: mono_lfo_1
-        destination: sub_volume
-        amount: 0.05441053
-      - source: mono_lfo_1
-        destination: cross_modulation
-        amount: 0.132
+      - source: step_sequencer
+        destination: arp_octaves
+        amount: 3
