@@ -455,7 +455,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Oculus_CrossPlatform_PrimaryThumbstick
-    descriptiveName: 
+    descriptiveName: ' '
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 8

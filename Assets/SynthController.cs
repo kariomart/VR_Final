@@ -8,6 +8,7 @@ public class SynthController : MonoBehaviour
 {
     
     public bool left;
+    public bool chords;
     public bool vrEnabled;
     public AudioSource source;
     public HelmController synth;
@@ -33,28 +34,44 @@ public class SynthController : MonoBehaviour
     Vector2 leftThumbstickVal;
     Vector2 rightThumbstickVal;
 
+    public HelmPatch[] chordPatches = new HelmPatch[4];
+    public HelmPatch[] arpPatches = new HelmPatch[4];
+    public int patchIndex;
+
+    public OVRInput.Controller leftController;
+
+    TextMesh text;
 
     void Start()
     {
         source = GetComponent<AudioSource>();
         synth = GetComponent<HelmController>();
-        defaultPos = hand.position; 
+        defaultPos = hand.position;
+        text = GetComponent<TextMesh>();
+
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (text)
+        {
+            text.text = "" + leftThumbstickVal;
+        }
+        //Debug.Log(OVRInput.Get((OVRInput.Axis2D.PrimaryThumbstick)));
        //UpdateRangeOfMotion();
         float diffY = hand.position.y - defaultPos.y;
         diffY = Remap(diffY, -rangeOfMovementY, rangeOfMovementY, -10, 10);
 
         float diffX = hand.position.x - defaultPos.x;
         source.panStereo = getPan(diffX);
+        synth.SetParameterAtIndex(3, Remap(diffX, -1f, 1f, 0f, 1f));
+        synth.SetParameterAtIndex(4, Remap(diffY, -5f, 5f, 0f, 1f));
 
         //Debug.Log(noteMin);
         int tempNote = noteMin + Mathf.RoundToInt(diffY);
-        Debug.Log(tempNote + "\n" + diffY);
+        //Debug.Log(tempNote + "\n" + diffY);
 
         if (tempNote != currentNote) {
             ChordOff(currentNote);
@@ -72,7 +89,7 @@ public class SynthController : MonoBehaviour
         }
 
         SetFilter();
-        Debug.Log(leftThumbstickVal);
+        //Debug.Log(leftThumbstickVal);
 
     }
 
@@ -140,11 +157,11 @@ public class SynthController : MonoBehaviour
         
         if (vrEnabled) {
             if (left) {
-                synth.SetParameterAtIndex(3, leftThumbstickVal.x);
-                synth.SetParameterAtIndex(4, leftThumbstickVal.y);
+                //synth.SetParameterAtIndex(3, leftThumbstickVal.x);
+               // synth.SetParameterAtIndex(4, leftThumbstickVal.y);
             } else {
-                synth.SetParameterAtIndex(3, rightThumbstickVal.x);
-                synth.SetParameterAtIndex(4, rightThumbstickVal.y);
+               // synth.SetParameterAtIndex(3, rightThumbstickVal.x);
+                //synth.SetParameterAtIndex(4, rightThumbstickVal.y);
             }
         }
     }
@@ -170,8 +187,9 @@ public class SynthController : MonoBehaviour
 
         if (left) {
             source.volume=1-OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
-            //leftThumbstickVal = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
-            leftThumbstickVal = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Active);
+            leftThumbstickVal = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+           
+            
         } else {
             source.volume=1-OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger);  
             rightThumbstickVal = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
@@ -190,6 +208,14 @@ public class SynthController : MonoBehaviour
                     synth.SetParameterAtIndex(5, 1);
                 }
             }
+
+            if (OVRInput.GetDown(OVRInput.RawButton.Y))
+            {
+                patchIndex++;
+                patchIndex %= arpPatches.Length;
+                synth.LoadPatch(arpPatches[patchIndex]);
+                Debug.Log("trying to load");
+            }
         } else
         {
             if (OVRInput.GetDown(OVRInput.RawButton.A))
@@ -202,6 +228,15 @@ public class SynthController : MonoBehaviour
                 {
                     synth.SetParameterAtIndex(5, 1);
                 }
+                
+            }
+
+            if (OVRInput.GetDown(OVRInput.RawButton.B))
+            {
+                patchIndex++;
+                patchIndex %= chordPatches.Length;
+                synth.LoadPatch(chordPatches[patchIndex]);
+                Debug.Log("trying to load");
             }
 
         }

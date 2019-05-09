@@ -12,7 +12,7 @@ public class MeshController : MonoBehaviour
     void Start()
     {
         mesh = GetComponent<MeshFilter>().mesh;
-        pts[0] = SelectRandomMeshPoints.GetRandomPointOnSurface(mesh);
+        pts[0] = transform.position+SelectRandomMeshPoints.GetRandomPointOnSurface(mesh);
     }
 
     // Update is called once per frame
